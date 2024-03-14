@@ -1,0 +1,59 @@
+/*====================================*/
+/*  */
+/*====================================*/
+.topHeader {
+  height: 40px;
+  display: flex;
+  font-size: 13px;
+  padding: 0 20px;
+  margin-left: 50%;
+  align-items: center;
+  width: calc(100% - 150px);
+  color: var(--primary-color);
+  transform: translateX(-50%);
+  border-radius: 0 0 10px 10px;
+  justify-content: space-between;
+  background: var(--brand-color);
+
+  > .leftAside,
+  .rightAside {
+    gap: 20px;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+  }
+
+  > .leftAside {
+    > .divider {
+      width: 2px;
+      height: 20px;
+      background: var(--secondary-color);
+    }
+    > .span {
+      display: flex;
+      align-items: center;
+
+      > .icon {
+        font-size: 14px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  > .rightAside{
+    display: flex;
+    align-items: center;
+
+    > .link{
+        font-family: 15px;
+    }
+  }
+}
+
+/*====================================*/
+/*  */
+/*====================================*/
+
+/*====================================*/
+/*  */
+/*====================================*/

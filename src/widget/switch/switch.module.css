@@ -29,12 +29,12 @@
 
 .slider:before {
   top: 50%;
+  left: 50%;
   content: "";
   bottom: 50%;
   transition: 0.4s;
   border-radius: 50%;
   position: absolute;
-  left: 50%;
   height: calc(100% - 5px);
   -webkit-transition: 0.4s;
   background-color: white;

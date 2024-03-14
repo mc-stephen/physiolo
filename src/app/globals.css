@@ -1,21 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,40..300&display=swap");
+
 /*======================================*/
 /*  */
 /*======================================*/
 :root {
-  --brand-color: #5886bf;
-  --primary-color: #FFFFFF;
+  --brand-color: #1e73be;
+  --primary-color: #ffffff;
   --secondary-color: #000000;
+  --light-black-color: #EFEFEF;
 }
 
 /*======================================*/
 /*  */
 /*======================================*/
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --primary-color: #000000;
-    --secondary-color: #FFFFFF;
+    --secondary-color: #ffffff;
   }
-}
+} */
 
 /*======================================*/
 /*  */
@@ -26,13 +29,19 @@
   margin: 0;
 }
 
-html {
-  color-scheme: white;
-}
+/* html {
+  color-scheme: dark;
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: var(--foreground-rgb)
+  color: var(--secondary-rgb);
+  background: var(--primary-rgb);
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  /* font-variation-settings:
+    "YOPQ" <thin stroke>; */
 }
 
 a {

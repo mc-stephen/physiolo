@@ -1,5 +1,6 @@
 import PublicRoundedSwitch from "@/widget/switch/switch";
 import Style from "./cookie.module.css";
+import Link from "next/link";
 
 //============================================
 //
@@ -7,23 +8,30 @@ import Style from "./cookie.module.css";
 export default function Policy() {
   return (
     <section className={Style.cookieCont}>
-      <b>Manage cookie consent</b>
-      <span>
-        To provide you with the best possible experience, we use technologies
-        such as cookies to store and/or access device information. If you agree
-        to these technologies, we may process data such as browsing behavior or
-        unique IDs on this website. If you do not give or withdraw your consent,
-        certain features and functionality may be affected.
-      </span>
-      <CookieSetting />
+      <i className={`fa fa-times ${Style.closeBtn}`}></i>
+      <b className={Style.title}>Manage cookie consent</b>
+      <div className={Style.scroll}>
+        <span className={Style.desc}>
+          To provide you with the best possible experience, we use technologies
+          such as cookies to store and/or access device information. If you
+          agree to these technologies, we may process data such as browsing
+          behavior or unique IDs on this website. If you do not give or withdraw
+          your consent, certain features and functionality may be affected.
+        </span>
+        <CookieSetting />
+      </div>
       <div className={Style.actionBtn}>
-        <button>Accept</button>
-        <button>Refuse</button>
-        <button>View settings</button>
+        <button className={Style.btn}>Accept</button>
+        <button className={Style.btn}>Refuse</button>
+        <button className={Style.btn}>View settings</button>
       </div>
       <div className={Style.links}>
-        <span>Cookie policy</span>
-        <span>Data protection</span>
+        <Link href="" className={Style.link}>
+          <span>Cookie policy</span>
+        </Link>
+        <Link href="" className={Style.link}>
+          <span>Data protection</span>
+        </Link>
       </div>
     </section>
   );
@@ -39,7 +47,7 @@ function CookieSetting() {
       <div className={Style.dropdown}>
         <div className={Style.dropdownHeader}>
           <b>Function</b>
-          <aside>
+          <aside className={Style.aside}>
             <span>Always active</span>
             <i className="fa fa-angle-down" />
           </aside>
@@ -55,7 +63,7 @@ function CookieSetting() {
       <div className={Style.dropdown}>
         <div className={Style.dropdownHeader}>
           <b>Marketing</b>
-          <aside>
+          <aside className={Style.aside}>
             <PublicRoundedSwitch />
             <i className="fa fa-angle-down" />
           </aside>
