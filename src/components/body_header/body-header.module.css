@@ -1,0 +1,35 @@
+.bodyHeader {
+  height: 400px;
+  position: relative;
+
+  > .bgImg {
+    height: 100vw;
+    object-fit: cover;
+  }
+
+  > .frontView {
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    background: var(--transparent-black);
+
+    > .pageTitle {
+      font-size: 30px;
+      color: var(--primary-color);
+    }
+
+    > .pagePath {
+      padding: 10px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 8px;
+      background: var(--primary-color);
+    }
+  }
+}

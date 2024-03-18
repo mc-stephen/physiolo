@@ -4,10 +4,12 @@
 /*  */
 /*======================================*/
 :root {
+  --grey-black: #000000f0;
   --brand-color: #1e73be;
   --primary-color: #ffffff;
   --secondary-color: #000000;
-  --light-black-color: #EFEFEF;
+  --light-black-color: #efefef;
+  --transparent-black: #00000029;
 }
 
 /*======================================*/
