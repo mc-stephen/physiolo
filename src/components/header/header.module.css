@@ -51,8 +51,178 @@
 }
 
 /*====================================*/
-/*  */
+
 /*====================================*/
+.bottomHeader {
+  background: var(--primary-color);
+  color: var(--grey-black);
+  font-size: 14px;
+  height: 60px;
+  width: calc(100% - 150px);
+  margin: 10px auto;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  
+  >.logo{
+    height: inherit;
+  }
+
+  >.logo >.logoImg{
+    height: 100%;
+  }
+
+  >.navBar >.navBarItems {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  > .navBar .navItem{
+    display: block;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+  }
+
+  > .navBar .navItem:hover{
+    color: var(--brand-color);
+  }
+
+  > .navButton{
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    padding: 17px 22px;
+    border: none;
+    background: var(--grey-black);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+
+  > .navButton:hover{
+    color: var(--primary-color);
+    background: var(--brand-color);
+  }
+  
+  > .navPhoneBox{
+    display: flex;
+  }
+  
+  >.navPhoneBox > .navPhoneIcon{
+    background: var(--brand-color);
+    color: var(--primary-color); 
+    margin-right: 15px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+  }
+
+  >.navPhoneBox > .navPhoneIcon > svg{
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+
+  >.navPhoneBox > .navPhoneInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  >.navPhoneBox > .navPhoneInfo > .navPhoneNo{
+    padding-top: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  > .navBar .navItem > .dropDownMenu{
+    display: none;
+  }
+
+  > .navBar .navItem > .dropDownMenu   .subDropDownMenu{
+    display: none;
+  }
+
+  > .navBar .navItem:hover > .dropDownMenu{
+    display: block;
+    position: absolute;
+    top: 100%;
+    background: var(--primary-color);
+    border: 1px solid #eeeeeece;
+    box-shadow: 0 0.5rem 1rem rgb(28, 26, 63, 0.15);
+    border-radius: 5px;
+    width: 200px;
+    transition: .12s;
+  }
+
+  > .navBar .navItem:hover > .dropDownMenu:hover   .subDropDownMenu{
+    display: block;
+    position: absolute;
+    background: var(--primary-color);
+    border: 1px solid #eeeeeece;
+    top: 0;
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(28, 26, 63, 0.15);
+    width: 200px;
+    left: 200px;
+    transition: .12s;
+  }
+
+  > .navBar .navItem:hover > .dropDownMenu > #dropDownMenuItem2{
+    background: var(--primary-color);
+    width: 380px;
+  }
+
+  > .navBar .navItem:hover > .dropDownMenu > .dropDownMenuItems{
+    display: block;
+    list-style: none;
+    color: var(--grey-black);
+  }
+
+  > .navBar .navItem:hover > .dropDownMenu > .dropDownMenuItems > .dropDownMenuItem{
+    padding-inline: 20px;
+    padding-block: 18px;
+    border-bottom: 1px solid #eeeeeece;
+    border-radius: 5px;
+  }
+
+  > .navBar .navItem:hover > .dropDownMenu > .dropDownMenuItems > .dropDownMenuItem:last-child{
+    border-bottom: none;
+  }
+
+  > .navBar .navItem:hover > .dropDownMenu > .dropDownMenuItems   .subDropDownMenuItems {
+    display: block;
+    list-style: none;
+    color: var(--grey-black);
+  }
+
+  > .navBar .navItem:hover > .dropDownMenu > .dropDownMenuItems   .subDropDownMenuItems > .subDropDownMenuItem{
+    padding-inline: 20px;
+    padding-block: 18px;
+    border-bottom: 1px solid #eeeeeece;
+    border-radius: 5px;
+  }
+
+  > .navBar .navItem:hover > .dropDownMenu > .dropDownMenuItems   .subDropDownMenuItems > .subDropDownMenuItem:last-child{
+    border-bottom: none;
+  }
+
+  > .navBar .navItem:hover > .dropDownMenu > .dropDownMenuItems >.dropDownMenuItem:hover{
+    color: var(--primary-color);
+    background: var(--brand-color);
+    transition: all 0.2s linear;
+  }
+
+  > .navBar .navItem:hover > .dropDownMenu > .dropDownMenuItems   .subDropDownMenuItems >.subDropDownMenuItem:hover{
+    color: var(--primary-color);
+    background: var(--brand-color);
+    transition: all 0.2s linear;
+  }
+}
 
 /*====================================*/
 /*  */
