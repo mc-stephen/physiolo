@@ -4,12 +4,12 @@ import profilePic from "/public/image/img.jpg";
 export default function Jobs() {
   return (
     <main>
-      <BodyHeader
+      {/* <BodyHeader
         pageTitle={"Jobs"}
         imageAlt={"Jobs Image"}
         pagePath={"Home / Jobs"}
         imageSource={profilePic}
-      />
+      /> */}
     </main>
   );
 }
