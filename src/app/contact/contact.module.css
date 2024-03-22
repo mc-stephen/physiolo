@@ -1,2 +1,141 @@
-.contact {
+.contactSection{
+    display: flex;
+    width: calc(100% - 150px);
+    margin: 50px auto;
+    padding: 10px;
+    background: var(--primary-color);
+    gap: 10px;
+    
+    > .contactImageBox{
+        width: 50%;
+    }
+
+    > .contactImageBox{
+        > .contactImage{
+            width: 90%;
+            height: 480px;
+            border-radius: 10px;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    > .contactBox{
+        width: 50%;
+    }
+
+    > .contactBox{
+        > .contactForm{
+            display: grid;
+
+            > .contactFormHeading{
+                text-align: center;
+                color: var(--brand-color);
+                margin: 0 0 50px;
+                font-size: 17px;
+            }
+
+            > .contactFormInputFieldBox{
+                display: grid;
+                height: 60px;
+                width: 100%;
+                grid-template-rows: repeat(3, 100%);
+                grid-template-columns: 50% 50%;
+                column-gap: 10px;
+                row-gap: 10px;
+                padding-inline-end: 10px;
+                
+                > .contactFormInput{
+                    padding: 15px 10px;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    border: 1px solid #eeeeeece;
+                    outline: medium;
+                    color: #999999;
+                }
+
+                > .contactFormInput:focus{
+                    border-color: var(--brand-color);
+                }
+
+                > .contactFormSelect{
+                    padding: 15px 10px;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    border: 1px solid #eeeeeece;
+                    outline: medium;
+                    color: #999999;
+                }
+
+                >.contactFormSelect:focus{
+                    border-color: var(--brand-color) ;
+                }
+
+                > .contactFormTextarea{
+                    grid-column: 1/-1;
+                    height: 120px;
+                    padding: 15px 10px;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    border: 1px solid #eeeeeece;
+                    outline: medium;
+                    color: #999999;
+                }
+
+                >.contactFormTextarea:focus{
+                    border-color: var(--brand-color);
+                }
+
+                > .contactFormTextarea::placeholder{
+                    font-size: 18px;
+                    font-family: inherit;
+                }
+
+                > .contactFormButton{
+                    grid-column: 1/-1;
+                    margin: 20px auto;
+                    padding: 22px 30px;
+                    margin-top: 80px;
+                    font-weight: 700;
+                    letter-spacing: 0.6px;
+                    border-radius: 5px;
+                    color: var(--primary-color);
+                    background: var(--grey-black);
+                    cursor: pointer;
+                    resize: vertical;
+                }
+
+                > .contactFormButton:hover{
+                    background: var(--brand-color);
+                    transition: all 0.2s linear;
+                    border: none;
+                }
+            }
+        }  
+    }
+}
+@media screen and (max-width: 1200px){
+    .contactSection{
+        flex-direction: column;
+        width: 100%;
+
+        >.contactImageBox{
+            width: calc(100% - 150px);
+            margin: 0 auto;
+        }
+
+        >.contactBox{
+            background: var(--primary-color);
+            width: calc(100% - 150px);
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        >.contactImageBox{
+            >.contactImage{
+                width: 100%;
+            }
+        }
+
+    }   
 }

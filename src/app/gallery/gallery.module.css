@@ -1,0 +1,35 @@
+.gallery {
+  .gallerySection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    > .galleryHeading{
+        line-height: 46px;
+        font-weight: 700;
+        font-size: 40px;
+        margin: 50px 0;
+        color: var(--brand-color);
+    }
+
+    > .gallerybox {
+        display: grid;
+        width: calc(100% - 150px);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr); 
+        gap:10px;
+        margin-bottom: 50px;
+
+        > .imgCont{
+            height: 500px;
+            position: relative;
+        }
+        
+        > .galleryImg{
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+  }
+}

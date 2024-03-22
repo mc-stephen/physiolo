@@ -59,7 +59,7 @@
   font-size: 14px;
   height: 60px;
   width: calc(100% - 150px);
-  margin: 10px auto;
+  margin: 10px auto; 
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -75,7 +75,7 @@
   >.navBar >.navBarItems {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
   }
 
   > .navBar .navItem{
