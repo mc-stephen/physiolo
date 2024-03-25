@@ -2,9 +2,9 @@ import Styles from "./cookie_policy.module.css";
 import BodyHeader from "@/components/body_header/body-header";
 import profilePic from "/public/image/cookie-policy.jpg"
 
-export default function Gallery() {
+export default function CookiePolicy() {
     return (
-        <main className={Styles.gallery}>
+        <main className={Styles.CookiePolicy}>
             {/*  */}
             <BodyHeader
             pageTitle={"COOKIE POLICY (EU)"}
@@ -19,8 +19,8 @@ export default function Gallery() {
                         <p className={Styles.policyParagraph}><i>This Cookie Policy was last updated on July 3, 2023 and applies to citizens and legal permanent
                             residents of the European Economic Area and Switzerland</i></p>
                         <h2 className={Styles.policyHeading}>1. Introduction</h2>
-                        <p className={Styles.policyParagraph}>Our website, <a href="https://physiolo.de">https://physiolo.de</a> (hereinafter: {"the website"}) uses cookies and other related technologies
-                            (for convenience all technologies are referred to as {"cookies"}). 
+                        <p className={Styles.policyParagraph}>Our website, <a href="https://physiolo.de">https://physiolo.de</a> (hereinafter: {"the website "}) uses cookies and other related technologies
+                            (for convenience all technologies are referred to as {"cookies "}). 
                             Cookies are also placed by third parties we have engaged. In the document below we inform you about the use of cookies on our website.</p>
                         <h2 className={Styles.policyHeading}>2. What are cookies?</h2>
                         <p className={Styles.policyParagraph}>A cookie is a small simple file that is sent along with pages of this website and stored by your browser on the hard drive of your computer or another device. 

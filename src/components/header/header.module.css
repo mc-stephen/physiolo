@@ -63,6 +63,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+  z-index: 999;
   
   >.logo{
     height: inherit;
@@ -157,6 +158,7 @@
     border-radius: 5px;
     width: 200px;
     transition: .12s;
+    z-index: 999
   }
 
   > .navBar .navItem:hover > .dropDownMenu:hover   .subDropDownMenu{
@@ -170,6 +172,7 @@
     width: 200px;
     left: 200px;
     transition: .12s;
+    z-index: 999
   }
 
   > .navBar .navItem:hover > .dropDownMenu > #dropDownMenuItem2{
