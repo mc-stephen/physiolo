@@ -1,5 +1,5 @@
 import BodyHeader from "@/components/body_header/body-header";
-import Styles from "./gallery.module.css";
+import Styles from "./page.module.css";
 import profilePic from "/public/image/gallery-header.jpg";
 import Image from "next/image";
 import imageList from "./image_list";
@@ -21,23 +21,19 @@ export default function Gallery() {
         <h2 className={Styles.galleryHeading}>Our Photo Gallery</h2>
         <div className={Styles.gallerybox}>
           {imageList.map((val, i) => {
-            return <ImageComponent imageSource={val} key={i} />;
+            return (
+              <div className={Styles.imgCont} key={i}>
+                <Image
+                  src={val}
+                  fill={true}
+                  alt={"imageAlt"}
+                  className={Styles.galleryImg}
+                />
+              </div>
+            );
           })}
         </div>
       </section>
     </main>
-  );
-}
-
-function ImageComponent({ imageSource }: { imageSource: StaticImport }) {
-  return (
-    <div className={Styles.imgCont}>
-      <Image
-        fill={true}
-        alt={"imageAlt"}
-        src={imageSource}
-        className={Styles.galleryImg}
-      />
-    </div>
   );
 }

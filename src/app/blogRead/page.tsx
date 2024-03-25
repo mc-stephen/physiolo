@@ -1,10 +1,9 @@
-import BodyHeader from "@/components/body_header/body-header";
-import Styles from "./sport_therapy.module.css";
-import profilePic from "/public/image/sport-therapy-header.jpg";
 import Image from "next/image";
-import blogImage from "/public/image/blog-image.jpg"
+import Styles from "./page.module.css";
+import BodyHeader from "@/components/body_header/body-header";
+import profilePic from "/public/image/sport-therapy-header.jpg";
 
-export default function SportTherapy() {
+export default function BlogRead() {
     return (
       <main className={Styles.SportTherapy}>
         {/*  */}
