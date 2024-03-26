@@ -3,6 +3,7 @@
   bottom: 10px;
   width: 500px;
   display: flex;
+  display: none;
   font-size: 13px;
   position: fixed;
   border-radius: 10px;
