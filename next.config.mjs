@@ -3,11 +3,30 @@ import withMDX from "@next/mdx";
 // const withMDX = import('@next/mdx')()
 
 const nextConfig = {
-  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
 };
 
 // const withMdxFunc = withMDX(nextConfig);
 export default withMDX(nextConfig)();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // export { withMdxFunc };
 
 // module.exports = withMDX(nextConfig);
