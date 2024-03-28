@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Styles from "./page.module.css";
 import BodyHeader from "@/components/body_header/body-header";
-import profilePic from "/public/image/sport-therapy-header.jpg";
+import profilePic from "/public/image/page-header.jpg";
+import blogReadImage from "/public/image/sport-therapy-header.jpg";
 
 export default function BlogRead() {
     return (
@@ -22,7 +23,7 @@ export default function BlogRead() {
                         <div className={Styles.postContentBox}>
                             <Image 
                                 className={Styles.postThumbnail} 
-                                src= {profilePic}
+                                src= {blogReadImage}
                                 alt={"post Thumnnail"}
                             />
                             <ul className={Styles.postListItems}>
