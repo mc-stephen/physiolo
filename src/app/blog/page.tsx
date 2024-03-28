@@ -1,8 +1,8 @@
 import BodyHeader from "@/components/body_header/body-header";
+import profilePic from "/public/image/page-header.jpg";
 import Styles from "./blog.module.css";
-import profilePic from "/public/image/blog-header.jpg";
 import Image from "next/image";
-import blogImage from "/public/image/blog-image.jpg"
+import blogImage from "/public/image/blog-image.jpg";
 
 
 export default function Blog() {

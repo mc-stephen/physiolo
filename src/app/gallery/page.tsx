@@ -1,6 +1,6 @@
 import BodyHeader from "@/components/body_header/body-header";
 import Styles from "./page.module.css";
-import profilePic from "/public/image/gallery-header.jpg";
+import profilePic from "/public/image/page-header.jpg";
 import Image from "next/image";
 import imageList from "./image_list";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";

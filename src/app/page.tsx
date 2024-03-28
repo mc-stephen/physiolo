@@ -92,6 +92,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/*  */}
+      <section className={styles.mapSection}>
+        <div className={styles.sectionMap}>
+          <button className={styles.mapButton}>Click to accept marketing cookies and enable this content</button>
+        </div>
+      </section>
     </main>
   );
 }

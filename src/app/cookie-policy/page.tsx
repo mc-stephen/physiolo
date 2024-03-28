@@ -1,6 +1,6 @@
 import Styles from "./page.module.css";
 import BodyHeader from "@/components/body_header/body-header";
-import profilePic from "/public/image/cookie-policy.jpg";
+import profilePic from "/public/image/page-header.jpg";
 
 export default function CookiePolicy() {
   return (

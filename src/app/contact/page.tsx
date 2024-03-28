@@ -1,6 +1,6 @@
 import BodyHeader from "@/components/body_header/body-header";
 import Styles from "./contact.module.css";
-import profilePic from "/public/image/Contact-Header.jpg";
+import profilePic from "/public/image/page-header.jpg";
 import contactPic from "/public/image/Contact.jpg";
 import Image from "next/image";
 
@@ -48,7 +48,11 @@ export default function Contact() {
       </section>
 
       {/*  */}
-      <section></section>
+      <section className={Styles.mapSection}>
+          <div className={Styles.sectionMap}>
+            <button className={Styles.mapButton}>Click to accept marketing cookies and enable this content</button>
+          </div>
+      </section>
     </main>
   );
   

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Styles from "./page.module.css";
 import BodyHeader from "@/components/body_header/body-header";
-import profilePic from "/public/image/sport-therapy-header.jpg";
+import profilePic from "/public/image/page-header.jpg";
 
 export default function BlogRead() {
     return (

@@ -1,6 +1,6 @@
 import BodyHeader from "@/components/body_header/body-header";
 import Styles from "./make-appointment.module.css";
-import profilePic from "/public/image/make-appointment.jpg";
+import profilePic from "/public/image/page-header.jpg";
 import Image from "next/image";
 import appointmentImg from "/public/image/clock.jpg"
 
