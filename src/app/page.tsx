@@ -4,7 +4,6 @@ import sliderImage1 from "/public/image/sport-therapy-header.jpg";
 import sliderImage2 from "/public/image/gallery-header.jpg";
 import  sliderImage3 from "/public/image/contact-header.jpg";
 import sliderImage4 from "/public/image/cookie-policy.jpg";
-import sliderImage5 from  "/public/image/sport-therapy-header.jpg";
 import homeIcon1 from "/public/image/home/target.png";
 import homeIcon2 from "/public/image/home/massage.png";
 import homeIcon3 from  "/public/image/home/reflexology.png";
@@ -34,11 +33,6 @@ export default function Home() {
             />
             <Image 
               src={sliderImage4}
-              alt={"slider Image"}
-              className={styles.sliderImg}
-            />
-            <Image 
-              src={sliderImage5}
               alt={"slider Image"}
               className={styles.sliderImg}
             />
@@ -89,10 +83,12 @@ export default function Home() {
 
       {/*  */}
       <section className={styles.section}>
-        <div className={styles.appointmentContainer}>
-          <div className={styles.box}>
-            <h2 className={styles.heading}>An outstanding team is avialable to help you with your health concerns</h2>
-            <button className={styles.button}><a href="">MAKE AN APPOINTMENT</a></button>
+        <div className={styles.sectionBox}>
+          <div className={styles.appointmentContainer}>
+            <div className={styles.box}>
+              <h2 className={styles.heading}>An outstanding team is avialable to help you with your health concerns</h2>
+              <button className={styles.button}><a href="">MAKE AN APPOINTMENT</a></button>
+            </div>
           </div>
         </div>
       </section>
