@@ -14,7 +14,7 @@ export default function Policy() {
 
   //
   const showOrHideCookieCont = (val: boolean, click: number) => {
-    if (showCookieCont == true && click == 1) return;
+    if (val && click == 1) return;
     setShowCookieCont(!val);
   };
 
@@ -27,16 +27,13 @@ export default function Policy() {
     <section
       className={`${Style.cookieCont} ${!showCookieCont ? Style.minimize : ""}`}
     >
-      <i
-        className={`fa fa-times ${Style.closeBtn}`}
-        onClick={() => showOrHideCookieCont(showCookieCont, 0)}
-      ></i>
-      <b
-        className={Style.title}
-        onClick={() => showOrHideCookieCont(showCookieCont, 1)}
-      >
-        Manage cookie consent
-      </b>
+      <div className={Style.headerRow}>
+        <b className={Style.title}>Manage cookie consent</b>
+        <i
+          className={`fa fa-times ${Style.closeBtn}`}
+          onClick={() => showOrHideCookieCont(showCookieCont, 0)}
+        ></i>
+      </div>
       <div className={Style.scroll}>
         <span className={Style.desc}>
           To provide you with the best possible experience, we use technologies
@@ -49,21 +46,25 @@ export default function Policy() {
       </div>
       <div className={Style.actionBtn}>
         <button className={Style.btn}>Accept</button>
-        <button className={Style.btn}>Refuse</button>
-        <button
+        <input
+          type="button"
+          value="Refuse"
+          className={Style.btn}
+          onClick={() => showOrHideCookieCont(true, 0)}
+        />
+        <input
+          type="button"
           className={Style.btn}
           onClick={() => showOrHideCookieSettingCont()}
-        >
-          {!showCookieSettingCont ? "View " : "Close "}
-          settings
-        </button>
+          value={!showCookieSettingCont ? "View settings" : "Close settings"}
+        />
       </div>
       <div className={Style.links}>
         <Link href="/data-protection/cookie-policy" className={Style.link}>
-          <span>Cookie policy</span>
+          Cookie policy
         </Link>
         <Link href="/data-protection" className={Style.link}>
-          <span>Data protection</span>
+          Data protection
         </Link>
       </div>
     </section>

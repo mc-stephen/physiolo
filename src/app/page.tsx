@@ -1,24 +1,23 @@
 "use client";
 
-import Image from "next/image";
-import styles from "./page.module.css";
-import GoogleMapLocation from "@/widget/map/map";
-import sliderImage1 from "/public/image/sport-therapy-header.jpg";
-import sliderImage2 from "/public/image/Contact.jpg";
-import sliderImage3 from "/public/image/image2.jpg";
-import sliderImage4 from "/public/image/cookie-policy.jpg";
-import homeIcon1 from "/public/image/home/target.png";
-import homeIcon2 from "/public/image/home/massage.png";
-import homeIcon3 from "/public/image/home/reflexology.png";
-// import Swiper core and required modules
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
-
-// Import Swiper styles
 import "swiper/css";
+import Link from "next/link";
 import "swiper/css/autoplay";
+import Image from "next/image";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import styles from "./page.module.css";
+import GoogleMapLocation from "@/widget/map/map";
+import { Swiper, SwiperSlide } from "swiper/react";
+import sliderImage3 from "/public/image/image2.jpg";
+import sliderImage2 from "/public/image/Contact.jpg";
+import homeIcon1 from "/public/image/home/target.png";
+import homeIcon2 from "/public/image/home/massage.png";
+import sliderImage4 from "/public/image/cookie-policy.jpg";
+import homeIcon3 from "/public/image/home/reflexology.png";
+import { Navigation, Autoplay, A11y } from "swiper/modules";
+import appointmentImg from "../../public/image/home-Image.jpg";
+import sliderImage1 from "/public/image/sport-therapy-header.jpg";
 
 export default function Home() {
   const sliderImages = [sliderImage1, sliderImage2, sliderImage3, sliderImage4];
@@ -32,7 +31,7 @@ export default function Home() {
           spaceBetween={50}
           className={styles.swiper}
           pagination={{ clickable: true }}
-          modules={[Navigation, Pagination, Autoplay, A11y]}
+          modules={[Navigation, Autoplay, A11y]}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
@@ -156,18 +155,19 @@ export default function Home() {
 
       {/*  */}
       <section className={styles.section}>
-        <div className={styles.sectionBox}>
-          <div className={styles.appointmentContainer}>
-            <div className={styles.box}>
-              <h2 className={styles.heading}>
-                An outstanding team is avialable to help you with your health
-                concerns
-              </h2>
-              <button className={styles.button}>
-                <a href="">MAKE AN APPOINTMENT</a>
-              </button>
-            </div>
-          </div>
+        <Image
+          className={styles.appointmentImg}
+          src={appointmentImg}
+          alt="message image"
+        />
+        <div className={styles.frontCont}>
+          <b className={styles.heading}>
+            An outstanding team is available to help you with your health
+            concerns
+          </b>
+          <Link href="/book-appointment" className={styles.link}>
+            <button className={styles.btn}>MAKE AN APPOINTMENT</button>
+          </Link>
         </div>
       </section>
 

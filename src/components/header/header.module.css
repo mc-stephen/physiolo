@@ -2,6 +2,7 @@
 /*  */
 /*====================================*/
 .header {
+  z-index: 1;
   width: 100%;
   padding: 0 10%;
   overflow: hidden;
@@ -62,11 +63,11 @@
   /*  */
   /*----------------------------------*/
   >.bottomHeader {
+    z-index: 1;
     width: 100%;
-    height: 60px;
+    height: 80px;
     display: flex;
     font-size: 14px;
-    margin: 10px auto;
     position: relative;
     align-items: center;
     color: var(--grey-black);
@@ -83,20 +84,25 @@
         height: 100%;
         width: fit-content;
         object-fit: contain;
+        padding: 10px 10px 10px 0;
       }
     }
 
     /*-----------------NAV BAR---------------------*/
     >.navBarItems {
       gap: 25px;
+      z-index: 1;
       height: 100%;
       display: flex;
       list-style: none;
+      position: relative;
       align-items: center;
 
       >.navItem {
+        z-index: 1;
         height: 100%;
         font-weight: 600;
+        position: relative;
         letter-spacing: 0.6px;
 
         >.label {
@@ -108,6 +114,7 @@
 
         >.dropDownMenu {
           top: 100%;
+          z-index: 1;
           display: none;
           list-style: none;
           min-width: 200px;
@@ -118,7 +125,6 @@
           border: 1px solid #eeeeeece;
           background: var(--primary-color);
           box-shadow: 0 0.5rem 1rem rgb(28, 26, 63, 0.15);
-          z-index: 999;
 
           >.dropDownMenuItem {
             border-radius: 5px;
@@ -145,7 +151,6 @@
               border: 1px solid #eeeeeece;
               background: var(--primary-color);
               box-shadow: 0 0.5rem 1rem rgba(28, 26, 63, 0.15);
-              z-index: 999;
             }
           }
 
@@ -262,33 +267,27 @@
 
   }
 
+  /*=========================================*/
   >.bottomHeader.fixedHeader {
     top: 0;
     left: 0;
     margin: 0;
     height: 80px;
-    padding: 5% 10%;
+    padding: 0px 10%;
     position: fixed;
-    box-shadow: 0 0.5rem 1rem rgba(28, 26, 63, 0.15);
     transition: top 0.3s ease;
+    box-shadow: 0 0.5rem 1rem rgba(28, 26, 63, 0.15);
     /* Add transition effect for smooth animation */
-    animation-name: slideDown;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-    animation-direction: normal;
-    animation-play-state: running;
     animation-delay: 0s;
-    z-index: 999;
+    animation-duration: 0.5s;
+    animation-name: slideDown;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
 
     >.navPhoneBox {
       display: none;
-    }
-
-    > .link{
-      > .img{
-        padding: 10px 10px 10px 0;
-      }
     }
   }
 }
