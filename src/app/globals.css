@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,40..300&display=swap");
+
+/*======================================*/
+/*  */
+/*======================================*/
+:root {
+  --grey-black: #000000f0;
+  --brand-color: #ed0926;
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --light-black-color: #efefef;
+  --transparent-black: #00000029;
+}
+
+/*======================================*/
+/*  */
+/*======================================*/
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+  }
+} */
+
+/*======================================*/
+/*  */
+/*======================================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* html {
+  color-scheme: dark;
+} */
+
+body {
+  color: var(--secondary-rgb);
+  background: var(--primary-rgb);
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  /* font-variation-settings:
+    "YOPQ" <thin stroke>; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

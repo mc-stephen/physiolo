@@ -1,0 +1,421 @@
+.sportTherapySection{
+    width: calc(100% - 200px);
+    display: flex;
+    margin: 100px auto;
+    gap:50px;
+
+    > .postSection{
+        display: flex;
+        flex-direction: column;
+        width:70%;
+        padding: 10px;
+
+        > .postContentBox{
+            > .postThumbnail{
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            > .postListItems{
+                display: flex;
+                margin: 30px 0;
+                gap: 20px;
+                padding-inline: 10px;
+
+                > .postListItem{
+                    list-style: none;
+                    color: #656364;
+                    font-size: 14px;
+                    line-height: 14px;
+                    font-weight: 600;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+
+                    > .postListItemIcon{
+                        color: var(--brand-color);
+                        font-size: 20px;
+                    }
+
+                    > .postListItemLink:hover{
+                        color: var(--brand-color);
+                    }
+                    > .postListItemLink{
+                        margin-inline: 3px;
+                        > .postListItemIcon{
+                            color: var(--brand-color);
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+            }
+
+            > .postContent{
+                margin-bottom: 30px;
+                line-height: 30px;
+                font-weight: 400;
+                color: #999999;
+                font-size: 17px;
+                padding-inline: 10px;
+            }
+
+            >.postTags{
+                display: flex;
+                font-size: 22px;
+                text-transform: capitalize;
+                color: #656364;
+                font-weight: 600;
+                flex-wrap: wrap;
+                padding-inline: 10px;
+
+                > .postTag{
+                    border: 1px solid #eeeeee;
+                    padding: 8px 16px;
+                    display: inline-block;
+                    font-size: 15px;
+                    text-transform: capitalize;
+                    border-radius: 6px;
+                    color: #656364;
+                    font-weight: 700;
+                    margin: 0 10px 10px 5px;
+                }
+
+                > .postTag:hover{
+                    color: var(--primary-color);
+                    background-color: var(--brand-color);
+                    transition: all 0.5s ease-in-out 0s;
+                }
+            }
+        }
+
+        > .otherPost{
+            display: flex;
+
+            > .otherPostLink{
+                word-break: break-word;
+                font-size: 23px;
+                text-transform: capitalize;
+                color: #656364;
+                font-weight: 700;
+                margin: 70px 0;
+                width:95%;
+                position: relative;
+            }
+
+            > .linkArrow{
+                position: absolute;
+                left: 62%;
+                font-size: 45px;
+                margin-top: 60px;
+                color: var(--brand-color);
+                background-color: var(--primary-color);
+                border-radius: 50%;
+            }
+        }
+
+        > .formHeading{
+            font-size: 34px;
+            line-height: 44px;
+            margin-bottom: 15px;
+        }
+
+        > .formIntro{
+            margin-bottom: 30px;
+            line-height: 30px;
+            font-weight: 400;
+            color: #999999;
+            font-size: 17px;
+        }
+
+        > .postForm{
+            width: 100%;
+            > .formInputFields{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                > .formLabel{
+                    line-height: 30px;
+                    font-weight: 400;
+                    color: #999999;
+                    font-size: 17px;
+                }
+
+                > .formInputField {
+                    border: 1px solid #eeeeee;
+                    padding: 10px ;
+                    width: 100%;
+                    height: 60px;
+                    color: #999999;
+                    border-radius: 6px;
+                    outline: var(--brand-color);
+                    margin-bottom: 15px;
+                }
+
+                > .formTextareaField{
+                    border: 1px solid #eeeeee;
+                    padding: 10px ;
+                    color: #999999;
+                    border-radius: 6px;
+                    outline: var(--brand-color);
+                    margin-bottom: 15px;
+                    width: 100%;
+                }
+
+                > .formInputField:focus, .formTextareaField:focus{
+                    border: 1px solid var(--brand-color);
+                }
+
+                > .formButton{
+                    font-size: 15px;
+                    line-height: 15px;
+                    font-weight: 600;
+                    letter-spacing: 0.6px;
+                    border: none;
+                    color: var(--primary-color);
+                    padding: 22px 25px;
+                    border-radius: 6px;
+                    background-color: var(--brand-color);
+                    width: fit-content;
+                    cursor: pointer;
+                    transition: all 0.5s ease-in-out 0s;
+                }
+
+                > .formButton:hover{
+                    background-color: var(--grey-black);
+                }
+
+                > .formInnerInputFields{
+                        display: flex;
+                        width: 100%;
+                        gap: 30px;
+
+                    > .formInputBox{
+                        display: flex;
+                        flex-direction: column;
+                        width: 50%;
+
+                        > .formLabel{
+                            line-height: 30px;
+                            font-weight: 400;
+                            color: #999999;
+                            font-size: 17px;
+                        }
+
+                        > .formInputField{
+                            border: 1px solid #eeeeee;
+                            padding: 10px ;
+                            height: 60px;
+                            color: #999999;
+                            border-radius: 6px;
+                            outline: var(--brand-color);
+                            margin-bottom: 15px;
+                        }
+
+                        > .formInputField:focus{
+                            border: 1px solid var(--brand-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > .postSidebar{
+        width:30%;
+        padding: 10px;
+
+        > .postAside{
+            > .widgetTitle{
+                margin-bottom: 10px;
+                position: relative;
+                color: #656364;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 34px;
+                display: block;
+                border-bottom: 1px solid var(--brand-color);
+                padding-bottom: 10px 
+            }
+
+            > .widgetList{
+                list-style: none;
+                margin: 20px 0;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+
+                > .widgetListItem{
+                    color: #656364;
+                    position: relative;
+                    border-bottom: 1px solid #eeeeee;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+
+                    > .listIcon{
+                        font-weight: 900;
+                        color: var(--brand-color);
+                        font-size: 16px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+                > .widgetListItem:hover{
+                    color: var(--brand-color)
+                }
+            }
+
+            > .widgetSearchForm{
+                > .widgetFormLabel{
+                    > .searchField{
+                        border: 1px solid #eeeeee;
+                        padding: 10px 10px 10px 15px;
+                        width: 100%;
+                        height: 60px;
+                        color: #656364;
+                        border-radius: 6px;
+                        margin: 20px 0 20px;
+                        position: relative;
+                        font-size: 16px;
+                        outline: none;
+                    }
+                    > .searchField:focus{
+                        border: 1px solid var(--brand-color);
+                    }
+                }
+                > .searchSubmit{
+                    position: absolute;
+                    border: none;
+                    font-size: 40px;
+                    background: none;
+                    left: 91%;
+                    margin-top: 25px;
+                    color: #656364;
+                }
+            }
+
+            > .widgetTagList{
+                list-style: none;
+                margin: 20px 0;
+
+                > .widgetTagItem{
+                    border: 1px solid #eeeeee;
+                    padding: 8px 16px;
+                    display: inline-block;
+                    font-size: 17px ;
+                    text-transform: capitalize;
+                    border-radius: 6px;
+                    font-weight: 700;
+                    margin: 0 10px 10px 0;
+                    color: #656364;
+                    outline: none;
+                    transition: all 0.5s ease-in-out 0s;
+                }
+
+                >.widgetTagItem:hover{
+                    color: var(--primary-color);
+                    background-color: var(--brand-color);
+                }
+            }
+
+            > .widgetContent{
+                line-height: 30px;
+                font-weight: 400;
+                color: #656364;
+                font-size: 17px;
+                margin: 20px 0 30px;
+            }
+
+            > .widgetpostSection{
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                width: 100%;
+
+                > .widgetpostSectionItem{
+                    display: flex;
+                    width: 100%;
+                    gap: 20px;
+                    margin-bottom: 20px;
+
+                    > .widgetPostImageBox{
+                        display: flex;
+                        align-content: center;
+                        justify-content: center;
+                        width:50%;
+
+                        > .widgetPostImage{
+                            display: flex;
+                            width: 100%;
+                            height: 200px;
+                            object-fit: contain;
+                            object-position: center;
+                        }
+                    }
+
+                    > .widgetPostIntro{
+                        display: flex;
+                        flex-direction: column;
+                        width: 50%;
+
+                        > .widgetPostTitle{
+                            font-size: 16px;
+                            color: #656364;
+                            font-weight: 700;
+                            line-height: 24px;
+                            margin-bottom: 20px;
+                        }
+
+                        > .widgetPostTime{
+                            color: var(--brand-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .sportTherapySection{
+        flex-direction: column;
+        width: calc(100% - 20px);
+
+        > .postSection{
+            width: 100%;
+            > .otherPost{
+                > .linkArrow{
+                    left: 90%;
+                }
+            }
+        }
+
+        > .postSidebar{
+            width: 100%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .sportTherapySection{
+        > .postSection{
+            > .postForm{
+                > .formInputFields{
+    
+                    > .formInnerInputFields{
+                        flex-direction: column;
+    
+                        > .formInputBox{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }  
+    } 
+}

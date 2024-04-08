@@ -1,0 +1,351 @@
+.main {
+  >.container {
+    width: 100%;
+
+    >.swiper {
+      z-index: 0;
+      width: 100%;
+      height: calc(100vh - 200px);
+
+      .swiperImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    /* > .slideWrapper{
+      position: relative;
+      width: 100%;
+
+      > .slider{
+        display: flex;
+        width: 100%;
+        transform: translate(-50% -50%);
+        left: 50%;
+        overflow: hidden;
+
+        > .sliderImg{
+          width: 100%;
+          height: 100vh;
+          flex: 1 0 100%;
+          object-fit: cover;
+          object-position: center;
+          animation: autoplay 20s linear infinite;
+          overflow: hidden;
+        }
+      }
+
+      > .slideNav{
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        top: 50%;
+        width: 100%;
+        gap: 50px;
+        padding-inline: 10px;
+
+        > .slideArrow{
+          background-color: var(--brand-color);
+          color: var(--primary-color);
+          font-size: 30px;
+          z-index: 2;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          padding-left: 14px;
+          cursor: pointer;
+        }
+      }
+
+      > .slideButtons{
+        display: flex;
+        position: absolute;
+        width: calc(100% - 150px);
+        top: 60%;
+        left: 5%;
+        gap: 50px;
+
+        > .slideButton{
+          padding: 18px 40px;
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: 600;
+          letter-spacing: 0.6px;
+          cursor: pointer;
+          text-align: center;
+          color: var(--primary-color);
+          background-color: var(--brand-color);
+          z-index: 1;
+          border-radius: 5px;
+          border: none;
+        }
+
+        > #slideButton2{
+          background-color: var(--grey-black);
+        }
+
+        > #slideButton1:hover{
+          background-color: var(--grey-black);
+          transition: all 0.3s ease-in-out;
+        }
+
+        > #slideButton2:hover{
+          background-color: var(--brand-color);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    } */
+  }
+
+  .servicesContainer {
+    width: calc(100% - 150px);
+    margin: 100px auto;
+
+    >.servicesHeading {
+      text-align: center;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: var(--brand-color);
+      margin-bottom: 50px;
+    }
+
+    >.servicesBoxContainer {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      gap: 50px;
+
+      >.servicesBox {
+        padding: 30px;
+        border: 1px solid #eeeeee;
+        border-radius: 5px;
+
+        >.servicesIcon {
+          >.homeIcon {
+            height: 60px;
+            width: 80px;
+            padding-right: 20px;
+            filter: invert(18%) sepia(71%) saturate(7498%) hue-rotate(346deg) brightness(91%) contrast(104%);
+          }
+        }
+
+
+        >.servicesTitle {
+          font-size: 22px;
+          padding-top: 10px;
+          margin-bottom: 10px;
+          font-weight: 700;
+          line-height: 32px;
+        }
+
+        >.servicesContent {
+          font-size: 16px;
+          font-weight: 400px;
+          line-height: 26px;
+          color: #999999;
+          width: 90%;
+          margin-bottom: 5px;
+        }
+
+        >.servicesButton {
+          padding: 10px 16px;
+          color: var(--primary-color);
+          background-color: var(--grey-black);
+          border: none;
+          margin: 5px;
+          cursor: pointer;
+          font-weight: 400;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    >.buttonBox {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+
+      >.moreServicesButton {
+        color: var(--primary-color);
+        background-color: var(--brand-color);
+        border: none;
+        padding: 15px 30px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        line-height: 14px;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        cursor: pointer;
+        margin: 0 auto;
+      }
+
+      >.moreServicesButton:hover {
+        transition: all 0.3s ease-in-out;
+        background-color: var(--grey-black);
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  >.section {
+    width: 100%;
+    background-image: url(https://physiolo.de/wp-content/uploads/2023/04/project-img-02.jpg);
+    background-position: center;
+    background-size: cover;
+
+    >.sectionBox {
+      height: 100%;
+      background-color: var(--brand-color);
+      opacity: 0.9;
+
+      >.appointmentContainer {
+        width: calc(100% - 150px);
+        margin: 0 auto;
+
+        >.box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-block: 100px;
+          width: inherit;
+          margin: 0 auto;
+
+          >.heading {
+            font-size: 46px;
+            line-height: 60px;
+            font-weight: 700;
+            text-align: center;
+            color: var(--primary-color);
+            padding-bottom: 50px;
+          }
+
+          >.button {
+            background-color: var(--primary-color);
+            color: var(--grey-black);
+            border-radius: 5px;
+            padding: 18px 25px;
+            border: none;
+            margin: 0 auto;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+          }
+
+          >.button:hover {
+            background-color: var(--grey-black);
+            color: var(--primary-color);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+
+    >.appointmentContainer {
+      width: calc(100% - 150px);
+      margin: 0 auto;
+
+      >.box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-block: 100px;
+        width: inherit;
+        margin: 0 auto;
+
+        >.heading {
+          font-size: 46px;
+          line-height: 60px;
+          font-weight: 700;
+          text-align: center;
+          color: var(--primary-color);
+          padding-bottom: 50px;
+        }
+
+        >.button {
+          background-color: var(--primary-color);
+          color: var(--grey-black);
+          border-radius: 5px;
+          padding: 18px 25px;
+          border: none;
+          margin: 0 auto;
+          text-transform: uppercase;
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: 600;
+          letter-spacing: 0.6px;
+          cursor: pointer;
+        }
+
+        >.button:hover {
+          background-color: var(--grey-black);
+          color: var(--primary-color);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  >.mapSection {
+    >.sectionMap {
+      width: 100%;
+      height: 1000px;
+      background-image: url(https://physiolo.de/wp-content/plugins/complianz-gdpr/assets/images/placeholders/google-maps-minimal-1280x920.jpg);
+      margin: 100px 0;
+      position: relative;
+
+      >.mapButton {
+        text-transform: initial;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 300px;
+        font-size: 14px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: var(--primary-color);
+        text-align: center;
+        z-index: 99;
+        line-height: 23px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+
+@keyframes autoplay {
+  0%{transform: translateX(0%);}
+  25%{transform: translateX(0%);}
+  30%{transform: translateX(-100%);}
+  50%{transform: translateX(-100%);}
+  55%{transform: translateX(-200%);}
+  75%{transform: translateX(-200%);}
+  80%{transform: translateX(-300%);}
+  100%{transform: translateX(-300%);}
+}
+
+
+@media screen and (max-width: 1000px ) {
+  .main{
+
+    .servicesContainer{
+      width: calc(100% - 20px);
+
+      > .servicesBoxContainer{
+        width: 100%;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px ) {
+  
+}

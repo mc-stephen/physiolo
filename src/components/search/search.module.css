@@ -1,0 +1,5 @@
+.searchCont{
+    > .searchInputCont{
+        display: none;
+    }
+}

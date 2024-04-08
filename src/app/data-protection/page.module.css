@@ -1,0 +1,52 @@
+.Container{
+    width: calc(100% - 150px);
+    margin: 100px auto;
+    font-size: 17px;
+    line-height: 30px;
+    color: #999999;
+
+    > .header1{
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        color: var(--brand-color);
+        padding-bottom: 20px;
+    }
+
+    > .header2{
+        font-size: 46px;
+        line-height: 60px;
+        font-weight: 700;
+        padding-bottom: 5px;
+        color: var(--secondary-color);
+    }
+
+    > .headerborder{
+        border-top: 1px solid #777676;
+        opacity: .20;
+        height: 1px;
+    }
+
+    > .content{
+        margin-top: 30px;
+
+        > .contentList{
+            padding-left: 30px;
+        }
+
+        > .contentList1{
+            list-style: none;
+        }
+
+        > .ProtectionLinks{
+            color: var(--grey-black);
+        }
+
+        > .contentSpan{
+            .ProtectionLinks{
+                color: var(--grey-black);
+            }
+        }
+    }
+}

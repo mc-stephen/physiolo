@@ -1,0 +1,137 @@
+.cookieCont {
+  right: 10px;
+  bottom: 10px;
+  width: 500px;
+  display: flex;
+  font-size: 13px;
+  position: fixed;
+  border-radius: 10px;
+  flex-direction: column;
+  transition: 0.5s ease-in;
+  padding: 0 10px 10px 10px;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  box-shadow: 0px 0px 10px 2.5px #55555525;
+
+  >.closeBtn {
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  >.title {
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  >.scroll {
+    display: flex;
+    padding: 1px 0;
+    max-height: 350px;
+    flex-direction: column;
+
+    .desc {
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+
+    /*--------------------------------------------*/
+    /*  */
+    /*--------------------------------------------*/
+    >.dropdownCont {
+      gap: 10px;
+      height: 0;
+      overflow-y: scroll;
+      flex-direction: column;
+      transition: 0.5s ease-in;
+
+      >.dropdown {
+        border-radius: 8px;
+        background: content-box;
+        padding: 0 10px 10px 10px;
+        background: var(--light-black-color);
+
+        >.dropdownHeader {
+          height: 40px;
+          display: flex;
+          cursor: pointer;
+          align-items: center;
+          justify-content: space-between;
+
+          >.aside {
+            gap: 10px;
+            display: flex;
+            align-items: center;
+          }
+
+          >.aside>span {
+            color: var(--brand-color);
+          }
+
+          >.aside>i {
+            font-size: 20px;
+          }
+        }
+
+        >.dropdownContent {
+          line-height: 20px;
+        }
+      }
+    }
+
+    >.dropdownCont.show {
+      height: 300px;
+    }
+  }
+
+  >.actionBtn {
+    gap: 10px;
+    display: flex;
+    margin: 15px 0;
+
+    >.btn {
+      width: 100%;
+      height: 45px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: 500;
+      border-radius: 8px;
+      width: calc(100% / 3);
+    }
+
+    >.btn:first-child {
+      color: var(--primary-color);
+      background: var(--brand-color);
+    }
+  }
+
+  >.links {
+    gap: 20px;
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: center;
+
+    >.link {
+      color: var(--brand-color);
+    }
+  }
+}
+
+.cookieCont.minimize {
+  bottom: -
+  50px;
+
+  >.closeBtn {
+    display: none;
+  }
+
+  >.title {
+    cursor: pointer;
+  }
+}

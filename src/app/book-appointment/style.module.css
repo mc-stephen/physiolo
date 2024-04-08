@@ -1,0 +1,164 @@
+.appointmentFirstBox{
+    width: calc(100% - 200px);
+    margin: 100px auto;
+
+    > .appointmentHeading{
+        text-align: center;
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        color: var(--brand-color);
+        margin-bottom: 20px;
+    }
+
+    > .appointmentDescription{
+        text-align: center;
+        line-height: 46px;
+        font-weight: 700;
+        color: var(--grey-black);
+        font-size: 40px;
+    }
+
+    > .appointmentFeaturesBox{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10px;
+        width: calc(100% - 150px);
+        margin: 50px auto 0;
+
+        > .featureBox{
+            display: flex;
+            gap: 20px;
+
+            > .featureIconBox{
+                > .featureIcon{
+                    color: var(--brand-color);
+                    font-size: 50px;
+                }
+            }
+
+            > .featureContent{
+                > .featureTitle{
+                    text-transform: capitalize;
+                    line-height: 30px;
+                    font-weight: 700;
+                    color: var(--grey-black);
+                    font-size: 22px;
+                    margin: 7px 0 10px;
+                }
+                > .featureDescription{
+                    line-height: 26px;
+                    font-size: 16px;
+                    color: #656364;
+                }
+                > .featureButton{
+                    padding: 18px 25px;
+                    transition: all 0.3s;
+                    border-radius: 6px;
+                    margin-top: 50px;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    line-height: 14px;
+                    font-weight: 600;
+                    letter-spacing: 0.6px;
+                    cursor: pointer;
+                    text-align: center;
+                    display: inline-block;
+                    color: var(--primary-color);
+                    background-color: var(--brand-color);
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+.appointmentSecondBox{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    background-color: var(--light-black-color);
+    gap: 20px;
+
+    > .appointmentImageBox{
+        width: 50%;
+        margin: 100px 0;
+        display: flex;
+        justify-content: flex-end;
+
+        > .appointmentImage{
+            width: 70%;
+            height: auto;
+        }
+    }
+
+    > .appointmentInfo{
+        width: 50%;
+        margin: 100px 0;
+
+        > .appointmentHeading{
+            color: var(--brand-color);
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            margin-bottom: 20px;
+        }
+
+        > .appointmentDescription{
+            line-height: 26px;
+            color: var(--grey-black);
+            line-height: 46px;
+            font-weight: 700;
+            font-size: 40px;
+            width: 80%;
+        }
+
+        > .appoinmentParagraph{
+            line-height: 30px;
+            margin-top: 30px;
+            font-size: 17px;
+            margin-top: 30px;
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .appointmentFirstBox{
+        > .appointmentFeaturesBox{
+            flex-direction: column;
+            gap: 30px;
+            > .featureBox{
+                border: 2px solid var(--brand-color);
+                padding: 20px 20px 70px 20px;
+                border-radius: 5px;
+                width: 300px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .appointmentSecondBox{
+        flex-direction: column;
+
+        > .appointmentImageBox{
+            width: 100%;
+
+            > .appointmentImage{
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+
+        > .appointmentInfo{
+            width: 100%;
+            padding: 0 10%;
+            margin-top: -80px;
+        }
+    }
+}

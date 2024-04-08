@@ -1,0 +1,39 @@
+.contr {
+    position: fixed;
+    top: 200px;
+    right: 0;
+    display: block;
+    text-align: center;
+    background-color: #107ACA;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100px;
+    border-radius: 4px 0 0 4px;
+    padding: 10px;
+    z-index: 999;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+
+    >.span {
+        font-size: 14px;
+        font-weight: bold;
+        vertical-align: inherit;
+    }
+
+    >.img {
+        display: inline-block;
+        height: 15px;
+        vertical-align: middle;
+        width: auto
+    }
+
+    >.link {
+        display: block;
+        color: #0596DE;
+        text-decoration: none;
+        padding: 5px;
+        margin-top: 5px;
+        background: #fff;
+        border-radius: 4px;
+    }
+}

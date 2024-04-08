@@ -1,0 +1,399 @@
+/*====================================*/
+/*  */
+/*====================================*/
+.header {
+  width: 100%;
+  padding: 0 10%;
+  overflow: hidden;
+  position: relative;
+
+  /*----------------------------------*/
+  /*  */
+  /*----------------------------------*/
+  >.topHeader {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    font-size: 13px;
+    padding: 0 20px;
+    align-items: center;
+    color: var(--primary-color);
+    border-radius: 0 0 10px 10px;
+    justify-content: space-between;
+    background: var(--brand-color);
+
+    >.leftAside,
+    .rightAside {
+      gap: 20px;
+      display: flex;
+      width: fit-content;
+      justify-content: center;
+    }
+
+    >.leftAside {
+      >.divider {
+        width: 2px;
+        height: 20px;
+        background: var(--secondary-color);
+      }
+
+      >.span {
+        display: flex;
+        align-items: center;
+
+        >.icon {
+          font-size: 14px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    >.rightAside {
+      display: flex;
+      align-items: center;
+
+      >.link {
+        font-family: 15px;
+      }
+    }
+  }
+
+  /*----------------------------------*/
+  /*  */
+  /*----------------------------------*/
+  >.bottomHeader {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    font-size: 14px;
+    margin: 10px auto;
+    position: relative;
+    align-items: center;
+    color: var(--grey-black);
+    justify-content: space-between;
+    background: var(--primary-color);
+
+    /*----------------LOGO IMG----------------------*/
+    >.link {
+      height: 100%;
+      position: relative;
+      margin-right: 20px;
+
+      >.img {
+        height: 100%;
+        width: fit-content;
+        object-fit: contain;
+      }
+    }
+
+    /*-----------------NAV BAR---------------------*/
+    >.navBarItems {
+      gap: 25px;
+      height: 100%;
+      display: flex;
+      list-style: none;
+      align-items: center;
+
+      >.navItem {
+        height: 100%;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+
+        >.label {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+        }
+
+        >.dropDownMenu {
+          top: 100%;
+          display: none;
+          list-style: none;
+          min-width: 200px;
+          transition: 0.12s;
+          position: absolute;
+          border-radius: 5px;
+          color: var(--grey-black);
+          border: 1px solid #eeeeeece;
+          background: var(--primary-color);
+          box-shadow: 0 0.5rem 1rem rgb(28, 26, 63, 0.15);
+          z-index: 999;
+
+          >.dropDownMenuItem {
+            border-radius: 5px;
+            border-bottom: 1px solid #eeeeeece;
+
+            >.label {
+              display: block;
+              text-wrap: nowrap;
+              padding-block: 18px;
+              padding-inline: 20px;
+              text-transform: uppercase;
+            }
+
+            >.subDropDownMenu {
+              top: 0;
+              left: 100%;
+              display: none;
+              min-width: 200px;
+              list-style: none;
+              transition: 0.12s;
+              border-radius: 5px;
+              position: absolute;
+              color: var(--grey-black);
+              border: 1px solid #eeeeeece;
+              background: var(--primary-color);
+              box-shadow: 0 0.5rem 1rem rgba(28, 26, 63, 0.15);
+              z-index: 999;
+            }
+          }
+
+          >.dropDownMenuItem:last-child {
+            border-bottom: none;
+          }
+
+          >.dropDownMenuItem:hover {
+            color: var(--primary-color);
+            background: var(--brand-color);
+            transition: all 0.2s linear;
+          }
+
+          >.dropDownMenuItem:hover>.subDropDownMenu {
+            display: block;
+
+            >.subDropDownMenuItem {
+              border-radius: 5px;
+              border-bottom: 1px solid #eeeeeece;
+
+              >.label {
+                display: block;
+                text-wrap: nowrap;
+                padding-block: 18px;
+                padding-inline: 20px;
+                text-transform: uppercase;
+              }
+            }
+
+            >.subDropDownMenuItem:last-child {
+              border-bottom: none;
+            }
+
+            >.subDropDownMenuItem:hover {
+              color: var(--primary-color);
+              transition: all 0.2s linear;
+              background: var(--brand-color);
+            }
+          }
+        }
+      }
+
+      >.navItem:hover {
+        color: var(--brand-color);
+      }
+
+      >.navItem:hover>.dropDownMenu {
+        display: block;
+      }
+    }
+
+    > .navBarsBox{
+      display: none;
+    }
+
+    /*--------------------------------------*/
+    >.navPhoneBox {
+      display: flex;
+
+      >.navPhoneIcon {
+        width: 43px;
+        height: 43px;
+        margin-right: 15px;
+        border-radius: 50%;
+        color: var(--primary-color);
+        background: var(--brand-color);
+
+        >.svg {
+          margin-top: 12px;
+          margin-left: 12px;
+        }
+      }
+
+      >.navPhoneInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-transform: uppercase;
+
+        >.navPhoneNo {
+          padding-top: 5px;
+          font-weight: 600;
+          cursor: pointer;
+          font-size: 14px;
+        }
+      }
+    }
+
+
+    /*--------------------------------------*/
+    >.navButton {
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 15px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--primary-color);
+      transition: all 0.2s linear;
+      background: var(--grey-black);
+      padding: 15px 15px;
+      border-radius: 5px;
+
+      >.link {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    > .navButton:hover{
+      background-color: var(--brand-color);
+    }
+
+  }
+
+  >.bottomHeader.fixedHeader {
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 80px;
+    padding: 5% 10%;
+    position: fixed;
+    box-shadow: 0 0.5rem 1rem rgba(28, 26, 63, 0.15);
+    transition: top 0.3s ease;
+    /* Add transition effect for smooth animation */
+    animation-name: slideDown;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-delay: 0s;
+    z-index: 999;
+
+    >.navPhoneBox {
+      display: none;
+    }
+
+    > .link{
+      > .img{
+        padding: 10px 10px 10px 0;
+      }
+    }
+  }
+}
+
+
+/*====================================*/
+/* ANIMATIONS */
+/*====================================*/
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .header{
+    padding: 0 10px 0 10px;
+
+    .topHeader {
+      display: none;
+    }
+  
+    .bottomHeader {
+      > .navBarItems{
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        top: 100%;
+        height: 380px;
+        background-color: var(--primary-color);
+        box-shadow: 0 0.5rem 1rem rgb(28, 26, 63, 0.15);
+        gap: 0;
+        z-index: 99;
+        width: 80%;
+  
+        > .navItem {
+          width: 100%;
+          right: 0;
+          left: 0;
+  
+          > .label {
+            padding-inline: 10px;
+            padding-block: 10px;
+          }
+  
+          > .dropDownMenu{
+            > .dropDownMenuItem {
+              > .subDropDownMenu {
+                left: 100%;
+                top: 0;
+                width: 50%;
+              }
+            }
+          }
+        }
+  
+        > .navItem:hover {
+          background-color: var(--brand-color);
+          color: var(--primary-color);
+        }
+      }
+  
+      > .navBarsBox {
+        display: block;
+        border: 2px solid var(--brand-color);
+        padding: 0 5px;
+        margin-right: 10px;
+        cursor: pointer;
+  
+        > .navBars {
+          height: 100%;
+          color: var(--brand-color);
+          font-size: 35px;
+        }
+      }
+    }
+
+    > .bottomHeader.fixedHeader{
+      padding: 0 10px 0 10px;
+    }
+  }
+  }
+
+@media screen and (max-width: 700px) {
+  .header{
+    padding: 0 0 0 10px;
+
+    .bottomHeader {
+  
+      > .navPhoneBox {
+        display: none;
+      }
+  
+      > .navButton {
+        display: none;
+      }
+    }
+
+    > .bottomHeader.fixedHeader{
+      padding: 0 0 0 10px;
+    }
+  }
+}
