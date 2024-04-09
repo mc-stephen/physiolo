@@ -1,10 +1,13 @@
 {
     "cSpell.words": [
         "Büchel",
+        "Doctolib",
         "Kumbh",
         "Neuss",
         "physiolo",
-        "swiper"
+        "swiper",
+        "unoptimized"
     ],
-    "editor.fontSize": 14
+    "editor.fontSize": 14,
+    "livePreview.defaultPreviewPath": "/out/index.html"
 }

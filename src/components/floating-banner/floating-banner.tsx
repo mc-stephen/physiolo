@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import Image from "next/image";
 import Style from "./style.module.css";
 
 export default function FloatingBanner() {
@@ -10,7 +13,9 @@ export default function FloatingBanner() {
         online
       </span>
       <br />
-      <img
+      <Image
+        width={100}
+        height={40}
         className={Style.img}
         src="https://www.doctolib.de/external_button/doctolib-white-transparent.png"
         alt="Doctolib"
@@ -23,7 +28,6 @@ export default function FloatingBanner() {
       >
         Neuss
       </Link>
-
       <Link
         className={Style.link}
         href="https://www.doctolib.de/praxis/neuss/physio-luepke-okocha-duesseldorf?pid=practice-434752&amp;?utm_campaign=website-button&amp;utm_source=physio-luepke-okocha-duesseldorf?pid=practice-434752&amp;-website-button&amp;utm_medium=referral&amp;utm_content=option-8&amp;utm_term=physio-luepke-okocha-duesseldorf?pid=practice-434752&amp;;"

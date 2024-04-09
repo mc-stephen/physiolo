@@ -1,3 +1,5 @@
+"use client";
+
 import Styles from "./page.module.css";
 import BodyHeader from "@/components/body-header/body-header";
 import profilePic from "/public/image/page-header.jpg";

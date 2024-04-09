@@ -23,7 +23,31 @@ import Image22 from "/public/image/gallery/gallery-22.jpg";
 import Image23 from "/public/image/gallery/gallery-23.jpg";
 import Image24 from "/public/image/gallery/gallery-24.jpg";
 
- const imageList = [Image1,Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image10, Image11, Image12, Image13,
-    Image14, Image15, Image16, Image17, Image18, Image19, Image20, Image21, Image22, Image23, Image24];
+const imageList = [
+  Image1,
+  Image2,
+  Image3,
+  Image4,
+  Image5,
+  Image6,
+  Image7,
+  Image8,
+  Image9,
+  Image10,
+  Image11,
+  Image12,
+  Image13,
+  Image14,
+  Image15,
+  Image16,
+  Image17,
+  Image18,
+  Image19,
+  Image20,
+  Image21,
+  Image22,
+  Image23,
+  Image24,
+];
 
- export default imageList;
+export default imageList;

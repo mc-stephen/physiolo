@@ -1,3 +1,5 @@
+"use client";
+
 import Styles from "./map.module.css";
 
 export default function GoogleMapLocation() {

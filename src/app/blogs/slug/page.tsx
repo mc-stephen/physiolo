@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Styles from "./page.module.css";
 import BodyHeader from "@/components/body-header/body-header";

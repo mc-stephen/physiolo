@@ -1,3 +1,5 @@
+"use client";
+
 import Styles from "./switch.module.css";
 
 export default function PublicRoundedSwitch() {

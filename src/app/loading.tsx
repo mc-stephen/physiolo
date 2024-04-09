@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Style from "./loading.module.css";
 import animationImg from "../../public/image/loading-animation.svg";

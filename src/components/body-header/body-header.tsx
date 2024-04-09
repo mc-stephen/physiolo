@@ -1,3 +1,5 @@
+"use client";
+
 import Styles from "./body-header.module.css";
 import Image, { StaticImageData } from "next/image";
 
