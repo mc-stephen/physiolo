@@ -1,5 +1,5 @@
 .appointmentFirstBox{
-    width: calc(100% - 200px);
+    width: calc(100% - 350px);
     margin: 100px auto;
 
     > .appointmentHeading{
@@ -89,7 +89,7 @@
         justify-content: flex-end;
 
         > .appointmentImage{
-            width: 70%;
+            width: 78%;
             height: auto;
         }
     }
@@ -136,6 +136,14 @@
                 padding: 20px 20px 70px 20px;
                 border-radius: 5px;
                 width: 300px;
+            }
+        }
+    }
+
+    .appointmentSecondBox{
+        > .appointmentImageBox{
+            > .appointmentImage{
+                width: 95%;
             }
         }
     }

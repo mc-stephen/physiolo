@@ -1,6 +1,6 @@
 .blogPost{
     display: flex;
-    width: calc(100% - 300px);
+    width: calc(100% - 350px);
     margin: 100px auto;
     line-height: 30px;
     font-weight: 400;

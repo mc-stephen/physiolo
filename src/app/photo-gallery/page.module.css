@@ -15,7 +15,7 @@
 
     > .gallerybox {
         display: grid;
-        width: calc(100% - 300px);
+        width: calc(100% - 350px);
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(8, 1fr); 
         grid-auto-flow: row; 
