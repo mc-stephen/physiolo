@@ -2,7 +2,7 @@
 
 const nextConfig = {
   output: "export",
-  assetPrefix: "./",
+  // assetPrefix: "./",
   images: { unoptimized: true },
   pageExtensions: ["js", "jsx", "ts", "tsx"],
 };

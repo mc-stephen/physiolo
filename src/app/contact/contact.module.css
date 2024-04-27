@@ -41,12 +41,12 @@
             >.contactFormInput,
             >.contactFormSelect,
             >.contactFormTextarea {
-                padding: 15px 10px;
-                font-size: 16px;
-                border-radius: 5px;
-                border: 1px solid #eeeeeece;
                 outline: medium;
-                color: #999999;
+                font-size: 15px;
+                color: #333333;
+                padding: 15px 10px;
+                border-radius: 5px;
+                border: 1px solid #02070e58;
             }
 
             >.contactFormInput:focus,
@@ -61,7 +61,7 @@
             }
 
             >.contactFormTextarea::placeholder {
-                font-size: 18px;
+                font-size: 16px;
                 font-family: inherit;
             }
 

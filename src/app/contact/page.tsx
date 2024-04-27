@@ -1,23 +1,41 @@
 "use client";
 
-import BodyHeader from "@/components/body-header/body-header";
-import profilePic from "/public/image/page-header.jpg";
-import contactPic from "/public/image/Contact.jpg";
-import Styles from "./contact.module.css";
 import Image from "next/image";
+import { useState } from "react";
+import Styles from "./contact.module.css";
 import GoogleMapLocation from "@/widget/map/map";
+import contactPic from "/public/image/Contact.jpg";
+import profilePic from "/public/image/page-header.jpg";
+import BodyHeader from "@/components/body-header/body-header";
 
 export default function Contact() {
-  const servicesOptions = [
-    "KG-KNS-PNF/BOBATH",
-    "PHYSIOTHERAPY",
-    "Manual lymph Drainage",
-    "MASSAGES",
-    "CMD",
-    "Development and training of athletes",
-    "Warm therapy",
-    "Cold/cryotherapy",
+  //====================================
+  //
+  //====================================
+  const [selectedEmail, setSelectedEmail] = useState<string>("");
+  const locations: SupportEmail[] = [
+    { label: "Neuss", email: "Neuss@physiolo.de" },
+    { label: "Duesseldorf", email: "Duesseldorf@physiolo.de" },
+    { label: "Duisburg", email: "Duisburg@physiolo.de" },
   ];
+
+  //====================================
+  //
+  //====================================
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedLocation = event.target.value;
+    const location = locations.find((loc) => loc.label === selectedLocation);
+    if (location) setSelectedEmail(location.email);
+  };
+
+  //====================================
+  //
+  //====================================
+  function sendEmail() {}
+
+  //====================================
+  //
+  //====================================
   return (
     <main className={Styles.contact}>
       {/*  */}
@@ -34,16 +52,28 @@ export default function Contact() {
         <form className={Styles.contactForm}>
           <b className={Styles.contactFormHeading}>GET IN CONTACT</b>
           <div className={Styles.contactFormInputFieldBox}>
+            <select
+              onChange={handleSelectChange}
+              className={Styles.contactFormSelect}
+              required
+            >
+              <option hidden>Select a support location</option>
+              {locations.map((location) => (
+                <option key={location.label} value={location.label}>
+                  {location.label}
+                </option>
+              ))}
+            </select>
             <input
               className={Styles.contactFormInput}
               type="text"
-              placeholder="Your Name"
+              placeholder="Your full-name"
               required
             />
             <input
               className={Styles.contactFormInput}
               type="email"
-              placeholder="Email-Address"
+              placeholder="Email address"
               required
             />
             <input
@@ -51,18 +81,9 @@ export default function Contact() {
               type="tel"
               placeholder="Telephone number"
             />
-            <select className={Styles.contactFormSelect} required>
-              {servicesOptions.map((val, i) => {
-                return (
-                  <option className={Styles.option} value={val} key={i}>
-                    {val}
-                  </option>
-                );
-              })}
-            </select>
             <textarea
               className={Styles.contactFormTextarea}
-              placeholder="News"
+              placeholder="Message"
               rows={5}
               cols={50}
               required
@@ -80,4 +101,12 @@ export default function Contact() {
       <GoogleMapLocation />
     </main>
   );
+}
+
+//====================================
+//
+//====================================
+interface SupportEmail {
+  label: string;
+  email: string;
 }
