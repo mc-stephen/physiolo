@@ -12,6 +12,7 @@ export default function Contact() {
   //====================================
   //
   //====================================
+  const copyEmail = "info@physiolo.de";
   const [selectedEmail, setSelectedEmail] = useState<string>("");
   const locations: SupportEmail[] = [
     { label: "Neuss", email: "Neuss@physiolo.de" },

@@ -151,6 +151,21 @@
               border: 1px solid #eeeeeece;
               background: var(--primary-color);
               box-shadow: 0 0.5rem 1rem rgba(28, 26, 63, 0.15);
+
+              >.subDropDownMenu {
+                top: 0;
+                left: 100%;
+                display: none;
+                min-width: 200px;
+                list-style: none;
+                transition: 0.12s;
+                border-radius: 5px;
+                position: absolute;
+                color: var(--grey-black);
+                border: 1px solid #eeeeeece;
+                background: var(--primary-color);
+                box-shadow: 0 0.5rem 1rem rgba(28, 26, 63, 0.15);
+              }
             }
           }
 
@@ -164,30 +179,38 @@
             transition: all 0.2s linear;
           }
 
-          >.dropDownMenuItem:hover>.subDropDownMenu {
-            display: block;
+          >.dropDownMenuItem:hover {
+            >.subDropDownMenu {
+              display: block;
 
-            >.subDropDownMenuItem {
-              border-radius: 5px;
-              border-bottom: 1px solid #eeeeeece;
+              .subDropDownMenuItem {
+                border-radius: 5px;
+                border-bottom: 1px solid #eeeeeece;
 
-              >.label {
-                display: block;
-                text-wrap: nowrap;
-                padding-block: 18px;
-                padding-inline: 20px;
-                text-transform: uppercase;
+                >.label {
+                  display: block;
+                  text-wrap: nowrap;
+                  padding-block: 18px;
+                  padding-inline: 20px;
+                  text-transform: uppercase;
+                }
+              }
+
+              >.subDropDownMenuItem:last-child {
+                border-bottom: none;
+              }
+
+              >.subDropDownMenuItem:hover {
+                color: var(--primary-color);
+                transition: all 0.2s linear;
+                background: var(--brand-color);
               }
             }
 
-            >.subDropDownMenuItem:last-child {
-              border-bottom: none;
-            }
-
-            >.subDropDownMenuItem:hover {
-              color: var(--primary-color);
-              transition: all 0.2s linear;
-              background: var(--brand-color);
+            >.subDropDownMenu:hover {
+              >.subDropDownMenu {
+                display: block;
+              }
             }
           }
         }
@@ -202,7 +225,7 @@
       }
     }
 
-    > .navBarsBox{
+    >.navBarsBox {
       display: none;
     }
 
@@ -261,7 +284,7 @@
       }
     }
 
-    > .navButton:hover{
+    >.navButton:hover {
       background-color: var(--brand-color);
     }
 
@@ -308,15 +331,15 @@
 
 
 @media screen and (max-width: 1000px) {
-  .header{
+  .header {
     padding: 0 10px 0 10px;
 
     .topHeader {
       display: none;
     }
-  
+
     .bottomHeader {
-      > .navBarItems{
+      >.navBarItems {
         position: absolute;
         display: none;
         flex-direction: column;
@@ -327,20 +350,20 @@
         gap: 0;
         z-index: 99;
         width: 80%;
-  
-        > .navItem {
+
+        >.navItem {
           width: 100%;
           right: 0;
           left: 0;
-  
-          > .label {
+
+          >.label {
             padding-inline: 10px;
             padding-block: 10px;
           }
-  
-          > .dropDownMenu{
-            > .dropDownMenuItem {
-              > .subDropDownMenu {
+
+          >.dropDownMenu {
+            >.dropDownMenuItem {
+              >.subDropDownMenu {
                 left: 100%;
                 top: 0;
                 width: 50%;
@@ -348,21 +371,21 @@
             }
           }
         }
-  
-        > .navItem:hover {
+
+        >.navItem:hover {
           background-color: var(--brand-color);
           color: var(--primary-color);
         }
       }
-  
-      > .navBarsBox {
+
+      >.navBarsBox {
         display: block;
         border: 2px solid var(--brand-color);
         padding: 0 5px;
         margin-right: 10px;
         cursor: pointer;
-  
-        > .navBars {
+
+        >.navBars {
           height: 100%;
           color: var(--brand-color);
           font-size: 35px;
@@ -370,28 +393,28 @@
       }
     }
 
-    > .bottomHeader.fixedHeader{
+    >.bottomHeader.fixedHeader {
       padding: 0 10px 0 10px;
     }
   }
-  }
+}
 
 @media screen and (max-width: 700px) {
-  .header{
+  .header {
     padding: 0 0 0 10px;
 
     .bottomHeader {
-  
-      > .navPhoneBox {
+
+      >.navPhoneBox {
         display: none;
       }
-  
-      > .navButton {
+
+      >.navButton {
         display: none;
       }
     }
 
-    > .bottomHeader.fixedHeader{
+    >.bottomHeader.fixedHeader {
       padding: 0 0 0 10px;
     }
   }

@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
+import Search from "../search/search";
 import Style from "./header.module.css";
 import { useEffect, useState } from "react";
-import HeaderLinks from "./header_pages_data";
+import HeaderLinks, { HeaderLinksInterface } from "./header_pages_data";
 import LogoImage from "../../../public/image/physio-logo.png";
-import Search from "../search/search";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,7 +41,7 @@ function TopHeader() {
         <div className={Style.divider}></div>
         <span className={Style.span}>
           <i className={`fa fa-envelope ${Style.icon}`} aria-hidden="true"></i>
-          Neuss@physiolo.de
+          info@physiolo.de
         </span>
       </aside>
       <aside className={Style.rightAside}>
@@ -78,12 +78,13 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
               <Link href={val.link} className={Style.label}>
                 {val.label}
               </Link>
-              {val.children.length == 0 || (
+              <MenuDropdownWidget menuItem={val.children} alignRight={false} />
+              {/* {val.children.length == 0 || (
                 <ul className={Style.dropDownMenu}>
                   {val.children.map((val1) => {
                     let link = `${val.link}${val1.link}`;
                     return (
-                      <li key={val1.label} className={Style.dropDownMenuItem} >
+                      <li key={val1.label} className={Style.dropDownMenuItem}>
                         <Link className={Style.label} href={link}>
                           {val1.label}
                         </Link>
@@ -108,17 +109,19 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
                     );
                   })}
                 </ul>
-              )}
+              )} */}
             </li>
           );
         })}
       </ul>
-      
+
       {/*---------------------------------Bars Icon ------------------- */}
       <div className={Style.navBarsBox}>
-        <span className={Style.navBars}><i className="fa fa-bars" aria-hidden="true" ></i></span>
+        <span className={Style.navBars}>
+          <i className="fa fa-bars" aria-hidden="true"></i>
+        </span>
       </div>
-      
+
       {/*-------------------Phone Icon-----------------------------*/}
       <div className={Style.navPhoneBox}>
         <div className={Style.navPhoneIcon}>
@@ -149,5 +152,33 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
         </Link>
       </button>
     </section>
+  );
+}
+
+//====================================
+//
+//====================================
+function MenuDropdownWidget({
+  menuItem,
+  alignRight,
+}: {
+  alignRight: boolean;
+  menuItem: Array<HeaderLinksInterface>;
+}) {
+  const className = alignRight ? Style.subDropDownMenu : Style.dropDownMenu;
+  const className1 = alignRight
+    ? Style.subDropDownMenuItem
+    : Style.dropDownMenuItem;
+  return (
+    <ul className={className}>
+      {menuItem.map((val) => (
+        <li key={val.label} className={className1}>
+          <Link className={Style.label} href={val.link}>
+            {val.label}
+          </Link>
+          <MenuDropdownWidget menuItem={val.children} alignRight={true} />
+        </li>
+      ))}
+    </ul>
   );
 }
