@@ -1,0 +1,33 @@
+.nuess {
+    >.body {
+        padding: 50px 10%;
+
+        >.teamSection {
+            gap: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            >.teamCont {
+                gap: 20px;
+                width: 350px;
+                padding: 30px;
+                display: flex;
+                border-radius: 5px;
+                flex-direction: column;
+                border: 1px solid #9999997b;
+
+                >.img {
+                    width: 100%;
+                    height: 250px;
+                    background: #999;
+                    border-radius: 5px;
+                }
+
+                >.title {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

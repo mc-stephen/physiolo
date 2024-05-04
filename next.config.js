@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  output: "export",
+  // output: "export",
   // assetPrefix: "./",
   images: { unoptimized: true },
   pageExtensions: ["js", "jsx", "ts", "tsx"],

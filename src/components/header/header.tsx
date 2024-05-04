@@ -79,37 +79,6 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
                 {val.label}
               </Link>
               <MenuDropdownWidget menuItem={val.children} alignRight={false} />
-              {/* {val.children.length == 0 || (
-                <ul className={Style.dropDownMenu}>
-                  {val.children.map((val1) => {
-                    let link = `${val.link}${val1.link}`;
-                    return (
-                      <li key={val1.label} className={Style.dropDownMenuItem}>
-                        <Link className={Style.label} href={link}>
-                          {val1.label}
-                        </Link>
-                        {val1.children.length == 0 || (
-                          <ul className={Style.subDropDownMenu}>
-                            {val1.children.map((val2) => {
-                              let link2 = `${val.link}${val1.link}${val2.link}`;
-                              return (
-                                <li
-                                  key={val2.label}
-                                  className={Style.subDropDownMenuItem}
-                                >
-                                  <Link href={link2} className={Style.label}>
-                                    {val2.label}
-                                  </Link>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        )}
-                      </li>
-                    );
-                  })}
-                </ul>
-              )} */}
             </li>
           );
         })}

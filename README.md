@@ -40,9 +40,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <!-- English -->
 <!-- German -->
 <!-- Spanish -->
-
-<!-- email template should look more welcoming -->
-
-<!-- contact -->
-
-<!-- Team should have dropdown of the [nuess, disborge, & dissebug] -->
