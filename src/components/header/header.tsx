@@ -54,7 +54,11 @@ function TopHeader() {
         <Link href="" className={Style.link}>
           <i className="fa fa-whatsapp" aria-hidden="true"></i>
         </Link>
-        <Search />
+        <select>
+          <option hidden>Select Langs</option>
+          <option value="eng">English</option>
+          <option value="gmy">Germany</option>
+        </select>
       </aside>
     </section>
   );
