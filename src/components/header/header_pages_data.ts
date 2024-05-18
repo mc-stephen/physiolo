@@ -8,11 +8,12 @@ const HeaderLinks: Array<HeaderLinksInterface> = [
         link: "practice",
         children: [
           { label: "about us", link: "/about-us", children: [] },
+          { label: "management", link: "/management", children: [] },
           {
             label: "team",
             link: "/team",
             children: [
-              { label: "Neuss", link: "/nuess", children: [] },
+              { label: "Neuss", link: "/neuss", children: [] },
               { label: "Dusseldorf", link: "/dusseldorf", children: [] },
               { label: "Duisburg", link: "/duisburg", children: [] },
             ],
@@ -28,7 +29,7 @@ const HeaderLinks: Array<HeaderLinksInterface> = [
       { label: "KG ZNS, PNF/BOBATH", link: "/bobath", children: [] },
       { label: "PHYSIOTHERAPY", link: "/physiotherapy", children: [] },
       { label: "MANUAL LYMPH DRAINAGE", link: "/drainage", children: [] },
-      { label: "MASSAGEs", link: "/messages", children: [] },
+      { label: "MASSAGEs", link: "/massages", children: [] },
       { label: "CDM", link: "/cdm", children: [] },
       {
         label: "BUILDING AND TRAINING ATHLETES",

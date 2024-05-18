@@ -33,7 +33,7 @@ export default function userMsgTemplate(data: UserMsg) {
       <body>
         <div class="container">
           <div class="header">
-            <h1>New User Message</h1>
+            <h1>Customer Message</h1>
           </div>
           <div class="content">
             <p>From: <b>${data.name}</b></p>

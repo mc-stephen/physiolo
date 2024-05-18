@@ -3,7 +3,7 @@
 import "swiper/css";
 import Link from "next/link";
 import "swiper/css/autoplay";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Style from "./page.module.css";
@@ -21,6 +21,33 @@ import sliderImage1 from "/public/image/sport-therapy-header.jpg";
 
 export default function Home() {
   const sliderImages = [sliderImage1, sliderImage2, sliderImage3, sliderImage4];
+  const service: Services[] = [
+    {
+      icon: homeIcon1,
+      path: "/bobath",
+      title: "KG-ZNS / PNF/BOBATH",
+      message: `Multiple sclerosis, Parkinson's disease, paraplegia, traumatic 
+        brain injury, stroke, joint surgery, sports accidents, facial, oral and 
+        swallowing problems (including jaw problems), back pain`,
+    },
+    {
+      icon: homeIcon2,
+      path: "/physiotherapy",
+      title: "PHYSIOTHERAPY",
+      message: `Fractures, use of artificial joints, amputations, muscle and 
+        tendon tears, strengthening and stabilization of patients, treatment 
+        after accidents or long-term illnesses, reintegration into work, 
+        osteoarthritis, spinal diseases`,
+    },
+    {
+      icon: homeIcon3,
+      path: "/drainage",
+      title: "Manual lymph drainage",
+      message: `Chronic, lymphedema, chronic venous insufficiency, postoperative 
+        swelling, torn muscle fibers, chronic polyarthritis, CRPS (complex regional 
+        pain syndrome), post-stroke hemiplegia swelling, headache`,
+    },
+  ];
   return (
     <main className={Style.main}>
       {/*  */}
@@ -48,109 +75,38 @@ export default function Home() {
             );
           })}
         </Swiper>
-        {/* <div className={Style.slideWrapper}>
-          <div className={Style.slider}>
-            <Image 
-              src={sliderImage1}
-              alt={"slider Image"}
-              className={Style.sliderImg}
-            />
-            <Image 
-              src={sliderImage2}
-              alt={"slider Image"}
-              className={Style.sliderImg}
-              />
-            <Image 
-              src={sliderImage3}
-              alt={"slider Image"}
-              className={Style.sliderImg}
-            />
-            <Image 
-              src={sliderImage4}
-              alt={"slider Image"}
-              className={Style.sliderImg}
-            />
-          </div>
-          <div className={Style.slideNav}>
-            <span className={Style.slideArrow}><i className="fa fa-angle-left" aria-hidden="true"></i></span>
-            <span className={Style.slideArrow}><i className="fa fa-angle-right" aria-hidden="true"></i></span>
-          </div>
-          <div className={Style.slideButtons}>
-            <button type="button" className={Style.slideButton} id={Style.slideButton1}>CONTINUE READING</button>
-            <button type="button" className={Style.slideButton} id={Style.slideButton2}>CONTACT</button>
-          </div>
-        </div> */}
       </section>
 
       {/*  */}
-      <section>
-        <div className={Style.servicesContainer}>
-          <h6 className={Style.servicesHeading}>OUR SERVICES</h6>
-          <div className={Style.servicesBoxContainer}>
-            <div className={Style.servicesBox}>
-              <span className={Style.servicesIcon}>
+      <section className={Style.servicesContainer}>
+        <b className={Style.title}>OUR SERVICES</b>
+        <div className={Style.grid}>
+          {service.map((val, i) => {
+            return (
+              <div className={Style.servicesCont} key={i}>
                 <Image
-                  src={homeIcon1}
-                  alt={"home Icon"}
+                  src={val.icon}
+                  alt={val.title}
                   className={Style.homeIcon}
                 />
-              </span>
-              <h5 className={Style.servicesTitle}>KG-KNS-PNF/BOBATH</h5>
-              <p className={Style.servicesContent}>
-                Multiple sclerosis, {"Parkinson's"} disease, paraplegia,
-                traumatic brain injury, stroke, joint surgery, sports accidents,
-                facial, oral and swallowing problems (including jaw problems),
-                back pain
-              </p>
-              <button type="button" className={Style.servicesButton}>
-                Learn more
-              </button>
-            </div>
-            <div className={Style.servicesBox}>
-              <span className={Style.servicesIcon}>
-                <Image
-                  src={homeIcon2}
-                  alt={"home Icon"}
-                  className={Style.homeIcon}
-                />
-              </span>
-              <h5 className={Style.servicesTitle}>PHYSIOTHERAPY</h5>
-              <p className={Style.servicesContent}>
-                Fractures, use of artificial joints, amputations, muscle and
-                tendon tears, strengthening and stabilization of patients,
-                treatment after accidents or long-term illnesses, reintegration
-                into work, osteoarthritis, spinal diseases
-              </p>
-              <button type="button" className={Style.servicesButton}>
-                Learn more
-              </button>
-            </div>
-            <div className={Style.servicesBox}>
-              <span className={Style.servicesIcon}>
-                <Image
-                  src={homeIcon3}
-                  alt={"home Icon"}
-                  className={Style.homeIcon}
-                />
-              </span>
-              <h5 className={Style.servicesTitle}>Manual lymph drainage</h5>
-              <p className={Style.servicesContent}>
-                Chronic, lymphedema, chronic venous insufficiency, postoperative
-                swelling, torn muscle fibers, chronic polyarthritis, CRPS
-                (complex regional pain syndrome), post-stroke hemiplegia
-                swelling, headache
-              </p>
-              <button type="button" className={Style.servicesButton}>
-                Learn More
-              </button>
-            </div>
-          </div>
-          <div className={Style.buttonBox}>
-            <button type="button" className={Style.moreServicesButton}>
-              View More Services
-            </button>
-          </div>
+                <h5 className={Style.title}>{val.title}</h5>
+                <p className={Style.msg}>{val.message}</p>
+                <Link href={`/services${val.path}`} className={Style.link}>
+                  <input
+                    type="button"
+                    value="Read More"
+                    className={Style.btn}
+                  />
+                </Link>
+              </div>
+            );
+          })}
         </div>
+        <Link href="/services" className={Style.link}>
+          <button type="button" className={Style.btn}>
+            View More Services
+          </button>
+        </Link>
       </section>
 
       {/*  */}
@@ -175,4 +131,14 @@ export default function Home() {
       <GoogleMapLocation />
     </main>
   );
+}
+
+//==========================
+// SERVICES
+//==========================
+interface Services {
+  path: string;
+  title: string;
+  message: string;
+  icon: StaticImageData;
 }

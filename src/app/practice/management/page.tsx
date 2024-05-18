@@ -4,26 +4,41 @@ import Style from "./style.module.css";
 import img from "/public/image/page-header.jpg";
 import BodyHeader from "@/components/body-header/body-header";
 
-export default function Dusseldorf() {
+export default function Duisburg() {
   const teams: team[] = [
     {
       image: "",
-      name: "Mustermann",
+      name: "Mpheza Christine, LÜPKE-OKOCHA",
+      skill: ["Inhaberin", " Bachelor of physiotherapy"],
+    },
+    {
+      image: "",
+      name: "Francis OkochaA",
+      skill: ["Praxis Manager"],
+    },
+    {
+        image: "",
+        name: "Dyana Saiid",
+        skill: ["PR Manager"],
+      },
+    {
+      image: "",
+      name: "Denise Groß",
       skill: ["Standortleiterin", " Physiotherapeutin"],
     },
     {
       image: "",
-      name: "Dyana Saiid",
-      skill: ["Receptionist"],
+      name: "Jean Paul ONANA",
+      skill: ["Standortleiter", " Physiotherapeut"],
     },
   ];
   return (
-    <main className={Style.dusseldorf}>
+    <main className={Style.duisburg}>
       <BodyHeader
         imageSource={img}
-        pageTitle={"Dusseldorf"}
-        imageAlt={"Dusseldorf Image"}
-        pagePath={"Home / Teams / Dusseldorf"}
+        pageTitle={"Management"}
+        imageAlt={"Management Image"}
+        pagePath={"Home / Management"}
       />
       <section className={Style.body}>
         {/*=====================================*/}

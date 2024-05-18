@@ -40,3 +40,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <!-- English -->
 <!-- German -->
 <!-- Spanish -->
+
+<!-- when hover over the management / teams, let a container show there email and phone -->
+
+<!-- services page should also be done -->

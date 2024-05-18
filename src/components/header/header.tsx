@@ -31,6 +31,9 @@ export default function Header() {
 //
 //====================================
 function TopHeader() {
+  const whatsapp = "https://wa.me/+4915792471990";
+  const instagram = "https://www.instagram.com/physio_lue_ok/";
+  const facebook = "https://www.facebook.com/profile.php?id=100057791464478";
   return (
     <section className={Style.topHeader}>
       <aside className={Style.leftAside}>
@@ -41,23 +44,24 @@ function TopHeader() {
         <div className={Style.divider}></div>
         <span className={Style.span}>
           <i className={`fa fa-envelope ${Style.icon}`} aria-hidden="true"></i>
-          info@physiolo.de
+          <Link href="mailto:info@physiolo.de">info@physiolo.de</Link>
         </span>
       </aside>
       <aside className={Style.rightAside}>
-        <Link href="" className={Style.link}>
+        <Link href={facebook} className={Style.link}>
           <i className="fa fa-facebook" aria-hidden="true"></i>
         </Link>
-        <Link href="" className={Style.link}>
+        <Link href={instagram} className={Style.link}>
           <i className="fa fa-instagram" aria-hidden="true"></i>
         </Link>
-        <Link href="" className={Style.link}>
+        <Link href={whatsapp} className={Style.link}>
           <i className="fa fa-whatsapp" aria-hidden="true"></i>
         </Link>
         <select>
           <option hidden>Select Langs</option>
-          <option value="eng">English</option>
-          <option value="gmy">Germany</option>
+          <option value="en">English</option>
+          <option value="de">Germany</option>
+          <option value="es">Spanish</option>
         </select>
       </aside>
     </section>
@@ -82,7 +86,13 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
               <Link href={val.link} className={Style.label}>
                 {val.label}
               </Link>
-              <MenuDropdownWidget menuItem={val.children} alignRight={false} />
+              {val.children.length != 0 && (
+                <MenuDropdownWidget
+                  link={val.link}
+                  alignRight={false}
+                  menuItem={val.children}
+                />
+              )}
             </li>
           );
         })}
@@ -114,7 +124,9 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
         </div>
         <div className={Style.navPhoneInfo}>
           <p className={Style.navPhoneName}>Call Now</p>
-          <p className={Style.navPhoneNo}>02131-21858</p>
+          <Link href="tel:02131-21858" className={Style.navPhoneNo}>
+            <p>02131-21858</p>
+          </Link>
         </div>
       </div>
 
@@ -132,9 +144,11 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
 //
 //====================================
 function MenuDropdownWidget({
+  link,
   menuItem,
   alignRight,
 }: {
+  link: string;
   alignRight: boolean;
   menuItem: Array<HeaderLinksInterface>;
 }) {
@@ -144,14 +158,24 @@ function MenuDropdownWidget({
     : Style.dropDownMenuItem;
   return (
     <ul className={className}>
-      {menuItem.map((val) => (
-        <li key={val.label} className={className1}>
-          <Link className={Style.label} href={val.link}>
-            {val.label}
-          </Link>
-          <MenuDropdownWidget menuItem={val.children} alignRight={true} />
-        </li>
-      ))}
+      {menuItem.map((val) => {
+        let url = "";
+        url = link + val.link;
+        return (
+          <li key={val.label} className={className1}>
+            <Link className={Style.label} href={url}>
+              {val.label}
+            </Link>
+            {val.children.length != 0 && (
+              <MenuDropdownWidget
+                link={url}
+                alignRight={true}
+                menuItem={val.children}
+              />
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 }

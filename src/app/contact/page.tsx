@@ -14,9 +14,9 @@ export default function Contact() {
   //====================================
   //
   //====================================
-  const copyEmail = "info@physiolo.de";
   const [mailIsSent, setMailIsSent] = useState<boolean>(false);
   const [selectedEmail, setSelectedEmail] = useState<string>("");
+  const copyEmail = ["info@physiolo.de", "stephenugo939@gmail.com"];
   const [isSendingMail, setIsSendingMail] = useState<boolean>(false);
   const locations: SupportEmail[] = [
     { label: "Neuss", email: "neuss@physiolo.de" },

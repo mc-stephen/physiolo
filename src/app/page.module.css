@@ -100,94 +100,100 @@
 
   /*================================================*/
   .servicesContainer {
-    width: calc(100% - 350px);
+    display: flex;
     margin: 100px auto;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 350px);
 
-    >.servicesHeading {
-      text-align: center;
-      font-weight: 400;
-      font-size: 16px;
+    >.title {
       line-height: 26px;
       color: var(--brand-color);
-      margin-bottom: 50px;
     }
 
-    >.servicesBoxContainer {
+    >.grid {
       display: flex;
       justify-content: space-between;
-      margin: 0 auto;
+      margin-top: 50px;
       gap: 50px;
 
-      >.servicesBox {
+      >.servicesCont {
         padding: 30px;
         border: 1px solid #eeeeee;
         border-radius: 5px;
         width: 33.33%;
+        display: flex;
+        gap: 20px;
+        background: #0000000e;
+        flex-direction: column;
 
-        >.servicesIcon {
-          >.homeIcon {
-            height: 60px;
-            width: 80px;
-            padding-right: 20px;
-            filter: invert(18%) sepia(71%) saturate(7498%) hue-rotate(346deg) brightness(91%) contrast(104%);
-          }
+        >.homeIcon {
+          height: 60px;
+          width: 80px;
+          padding-right: 20px;
+          filter: invert(18%) sepia(71%) saturate(7498%) hue-rotate(346deg) brightness(91%) contrast(104%);
         }
 
-        >.servicesTitle {
+        >.title {
           font-size: 22px;
-          padding-top: 10px;
-          margin-bottom: 10px;
           font-weight: 700;
-          line-height: 32px;
         }
 
-        >.servicesContent {
-          font-size: 16px;
-          font-weight: 400px;
-          line-height: 26px;
-          color: #999999;
-          width: 90%;
-          margin-bottom: 5px;
+        >.msg {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-height: calc(1em * 4.5);
+          line-height: 1.5em;   
+          font-size: 15px;
         }
 
-        >.servicesButton {
-          padding: 10px 16px;
+        >.link {
+          width: fit-content;
+          border-radius: 5px;
           color: var(--primary-color);
           background-color: var(--grey-black);
-          border: none;
-          margin: 5px;
-          cursor: pointer;
-          font-weight: 400;
-          margin-bottom: 30px;
+
+          > .btn{
+            height: 40px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0 25px;
+            cursor: pointer;
+            font-weight: 400;
+            background: transparent;
+          }
         }
       }
     }
 
-    >.buttonBox {
-      display: flex;
-      justify-content: center;
-      margin: 30px 0;
-
-      >.moreServicesButton {
-        color: var(--primary-color);
-        background-color: var(--brand-color);
-        border: none;
-        padding: 15px 30px;
-        border-radius: 5px;
-        text-transform: uppercase;
-        line-height: 14px;
-        font-weight: 600;
-        letter-spacing: 0.6px;
-        cursor: pointer;
-        margin: 0 auto;
-      }
-
-      >.moreServicesButton:hover {
-        transition: all 0.3s ease-in-out;
-        background-color: var(--grey-black);
-        color: var(--primary-color);
-      }
+    >.link,
+    >.link>.btn {
+      margin: 50px 0;
+      color: var(--primary-color);
+      background-color: var(--brand-color);
+      border: none;
+      font-weight: bold;
+      padding: 15px 20px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      cursor: pointer;
     }
+
+    >.link>.btn {
+      margin: 0;
+      padding: 0;
+    }
+
+    >.moreServicesButton:hover {
+      transition: all 0.3s ease-in-out;
+      background-color: var(--grey-black);
+      color: var(--primary-color);
+    }
+
   }
 
   /*================================================*/
@@ -264,7 +270,7 @@
         width: 100%;
         flex-direction: column;
 
-        > .servicesBox{
+        >.servicesBox {
           width: 100%;
         }
       }
@@ -277,12 +283,14 @@
 /*  */
 /*===============================================*/
 @media screen and (max-width: 700px) {
-  .main{
-    > .section{
+  .main {
+    >.section {
       height: 500px;
-      > .frontCont{
+
+      >.frontCont {
         gap: 30px;
-        > .heading{
+
+        >.heading {
           font-size: 35px;
           width: 100%;
           padding: 0 10px;

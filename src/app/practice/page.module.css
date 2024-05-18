@@ -1,0 +1,8 @@
+.practice{
+    >.section{
+        display: flex;
+        padding: 50px;
+        font-weight: bold;
+        justify-content: center;
+    }
+}
