@@ -38,7 +38,7 @@ const HeaderLinks: Array<HeaderLinksInterface> = [
       },
       { label: "COLD / CRYOTHERAPY", link: "/cryotherapy", children: [] },
       { label: "HEAT THERAPY", link: "/heat-therapy", children: [] },
-      { label: "SPORTS THERAPY", link: "/spots-therapy", children: [] },
+      { label: "SPORTS THERAPY", link: "/sports-therapy", children: [] },
       { label: "MANUAL THERAPY", link: "/manual-therapy", children: [] },
     ],
   },

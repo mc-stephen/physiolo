@@ -44,7 +44,7 @@ export default function Contact() {
     await sendEmailHelper({
       cc: copyEmail,
       to: selectedEmail,
-      from: (form.elements.namedItem("email") as HTMLInputElement).value,
+      subject: "New user message",
       replyTo: (form.elements.namedItem("email") as HTMLInputElement).value,
       html: userMsgTemplate({
         name: (form.elements.namedItem("name") as HTMLInputElement).value,
@@ -60,7 +60,7 @@ export default function Contact() {
         (form.elements.namedItem("phone") as HTMLInputElement).value = "";
         (form.elements.namedItem("message") as HTMLInputElement).value = "";
       })
-      .catch((err) => {})
+      .catch((err) => console.log(err))
       .finally(() => setIsSendingMail(false));
   }
 

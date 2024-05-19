@@ -1,30 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import style from "./style.module.css";
+import Styles from "./services.module.css";
 import img from "/public/image/page-header.jpg";
 import BodyHeader from "@/components/body-header/body-header";
 
 export default function Services() {
   return (
-    <main className={style.services}>
+    <main className={Styles.services}>
       <BodyHeader
         pageTitle={"SERVICES"}
         imageAlt={"services img"}
         pagePath={"Home / Services"}
         imageSource={img}
       />
-      <section className={style.section}>
-        <span className={style.label}>SERVICES</span>
-        <b className={style.title}>PHYSIO LÜPKE-OKOCHA SERVICES</b>
-        <div className={style.grid}>
+      <section className={Styles.section}>
+        <span className={Styles.label}>SERVICES</span>
+        <b className={Styles.title}>PHYSIO LÜPKE-OKOCHA SERVICES</b>
+        <div className={Styles.grid}>
           {data.map((val, i) => {
             return (
-              <div key={i} className={style.servicesCont}>
-                <div className={style.img}></div>
-                <b className={style.title}>{val.title}</b>
-                <span className={style.msg}>{val.message}</span>
-                <Link href={`/services${val.path}`} className={style.button}>
+              <div key={i} className={Styles.servicesCont}>
+                <div className={Styles.img}></div>
+                <b className={Styles.title}>{val.title}</b>
+                <span className={Styles.msg}>{val.message}</span>
+                <Link href={`/services${val.path}`} className={Styles.button}>
                   <input type="button" value="Read More" />
                 </Link>
               </div>

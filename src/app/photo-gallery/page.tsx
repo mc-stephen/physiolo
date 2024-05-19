@@ -1,11 +1,10 @@
 "use client";
 
-import BodyHeader from "@/components/body-header/body-header";
+import Image from "next/image";
+import ImageList from "./image_list";
 import Styles from "./page.module.css";
 import profilePic from "/public/image/page-header.jpg";
-import Image from "next/image";
-import imageList from "./image_list";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import BodyHeader from "@/components/body-header/body-header";
 
 export default function Gallery() {
   return (
@@ -21,8 +20,8 @@ export default function Gallery() {
       {/*  */}
       <section className={Styles.gallerySection}>
         <h2 className={Styles.galleryHeading}>Our Photo Gallery</h2>
-        <div className={Styles.gallerybox}>
-          {imageList.map((val, i) => {
+        <div className={Styles.galleryBox}>
+          {ImageList.map((val, i) => {
             return (
               <div className={Styles.imgCont} key={i}>
                 <Image
