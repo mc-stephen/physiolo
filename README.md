@@ -35,12 +35,18 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
 <!-- languages -->
 <!-- English -->
-<!-- German -->
+<!-- German (should be the default) -->
 <!-- Spanish -->
+
+<!-- the book appointment btn on the header -->
+
+<!-- move "photo gallery to current in the header -->
+
+<!-- the linking og those 3 btn in book appointment page -->
 
 <!-- when hover over the management / teams, let a container show there email and phone -->
 
-<!-- services page should also be done -->
+<!-- Blogs has bugs on build / release export  -->
+<!-- copyright should be the current year -->

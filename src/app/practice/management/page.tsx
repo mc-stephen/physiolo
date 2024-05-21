@@ -8,12 +8,12 @@ export default function Duisburg() {
   const teams: team[] = [
     {
       image: "",
-      name: "Mpheza Christine, LÜPKE-OKOCHA",
+      name: "Mpheza Christine,\bLÜPKE-OKOCHA",
       skill: ["Inhaberin", " Bachelor of physiotherapy"],
     },
     {
       image: "",
-      name: "Francis OkochaA",
+      name: "Francis Okocha",
       skill: ["Praxis Manager"],
     },
     {
@@ -24,12 +24,12 @@ export default function Duisburg() {
     {
       image: "",
       name: "Denise Groß",
-      skill: ["Standortleiterin", " Physiotherapeutin"],
+      skill: ["Dusseldorf Standortleiterin", "\nPhysiotherapeutin"],
     },
     {
       image: "",
       name: "Jean Paul ONANA",
-      skill: ["Standortleiter", " Physiotherapeut"],
+      skill: ["Nuess Standortleiter", "\bPhysiotherapeut"],
     },
   ];
   return (

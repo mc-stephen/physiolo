@@ -14,7 +14,7 @@ export default function Nuess() {
     {
       image: "",
       name: "Paula Garcia Amores",
-      skill: ["Physiotherapeutische", "Praktikantin"],
+      skill: ["Physiotherapeutische", " Praktikantin"],
     },
     {
       image: "",
@@ -25,11 +25,6 @@ export default function Nuess() {
       image: "",
       name: "Destiny ABUBAKAR",
       skill: ["Rezeptionistin"],
-    },
-    {
-      image: "",
-      name: "Monika Buchmüller",
-      skill: ["Physiotherapeut"],
     },
     {
       image: "",
