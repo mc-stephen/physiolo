@@ -103,7 +103,7 @@ function BottomFooter() {
   return (
     <section className={Styles.bottomFooter}>
       <span className={Styles.copyright}>
-        Copyright © 2023 All Rights Reserved | PHYSIO LÜPKE-OKOCHA
+        Copyright © 2024 All Rights Reserved | PHYSIO LÜPKE-OKOCHA
       </span>
       <div className={Styles.role}>
         {socialMedialLinks.map((val) => {

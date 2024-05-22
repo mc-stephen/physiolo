@@ -1,98 +1,93 @@
-.blogPost{
+.blog {
+  > .bodyCont {
     display: flex;
-    width: calc(100% - 350px);
-    margin: 100px auto;
-    line-height: 30px;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 17px;
-    color: #999999;
-    gap: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    
+    .blogPost {
+      gap: 40px;
+      display: flex;
+      font-size: 17px;
+      font-weight: 400;
+      color: #999999;
+      line-height: 30px;
+      margin: 50px auto;
+      font-style: normal;
+      width: calc(100% - 350px);
 
-    > .imageBox{
+      > .blogImage {
+        width: 600px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 10px;
+        object-position: center;
+      }
+
+      > .blogInfo {
         width: 50%;
+        display: flex;
+        flex-direction: column;
 
-        > .blogImage{
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            object-position: center;
-        }
-    }
-
-    > .blogInfo{
-        width: 50%;
-    }
-
-    > .blogInfo{
-        > .blogTitle{
-        line-height: 46px;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 40px;
-        color: #656364;
-        margin: 20px 0 30px;
-        text-transform: capitalize;
-        }
-
-
-        > .blogMeta{
-            margin-bottom: 25px;
-        }
-
-        > .blogContentIntro{
-            margin-bottom: 30px;
-        }
-
-        .blogButton{
-            width: 120px;
-            height: 50px;
-            /* padding: 17px 13px; */
-            font-size: 17px;
-            font-weight: 400;
-            background: var(--grey-black);
-            color: var(--primary-color);
-            border: none;
-            cursor: pointer;
-        }
-
-        .blogButton:hover{
-            background-color: var(--brand-color);
-            transition: all 0.2s ease-in-out 0.1s;
-        }
-
-        > .blogList{
-            list-style: none;
+        > .blogListItem{
+            gap: 0 10px;
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
-
-            > .blogListItem{
-                border-bottom: 2px solid #999999;
-
-                > .blogListLink:hover{
-                    color: var(--brand-color);
-                }
-            }
         }
+
+        > .blogTitle {
+          line-height: 46px;
+          font-weight: 700;
+          font-style: normal;
+          font-size: 40px;
+          color: #656364;
+          margin: 20px 0 30px;
+          text-transform: capitalize;
+        }
+
+        > .blogMeta {
+          margin-bottom: 25px;
+        }
+
+        > .blogContentIntro {
+          margin-bottom: 30px;
+        }
+
+        .blogButton {
+          width: 120px;
+          height: 50px;
+          font-size: 17px;
+          font-weight: 400;
+          background: var(--grey-black);
+          color: var(--primary-color);
+          border: none;
+          cursor: pointer;
+        }
+
+        .blogButton:hover {
+          background-color: var(--brand-color);
+          transition: all 0.2s ease-in-out 0.1s;
+        }
+      }
     }
+  }
 }
 
-@media screen and (max-width: 1000px){
-    .blogPost{
-        flex-direction: column;
-        width: calc(100% - 20px);
+@media screen and (max-width: 1000px) {
+  .blogPost {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: calc(100% - 20px);
 
-        > .imageBox{
-            width: 100%;
-        }
-
-        > .blogInfo{
-            width: 100%;
-        }
+    > .blogImage {
+      width: 100%;
     }
+
+    > .blogInfo {
+      width: 100%;
+    }
+  }
 }
 
-@media screen and (max-width: 1000px){
-    
+@media screen and (max-width: 1000px) {
 }

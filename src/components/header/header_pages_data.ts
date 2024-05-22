@@ -44,8 +44,13 @@ const HeaderLinks: Array<HeaderLinksInterface> = [
   },
   { label: "JOBS", link: "/jobs", children: [] },
   { label: "BLOG", link: "/blogs", children: [] },
-  { label: "Current", link: "/current", children: [] },
-  { label: "Photo Gallery", link: "/photo-gallery", children: [] },
+  {
+    label: "Current",
+    link: "/current",
+    children: [
+      { label: "Photo Gallery", link: "/photo-gallery", children: [] },
+    ],
+  },
   { label: "Contact", link: "/contact", children: [] },
   {
     label: "DATA PROTECTION",
