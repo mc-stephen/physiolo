@@ -27,7 +27,7 @@ export default function Bobath() {
           </span>
           <b className={Style.title}>
             In our practices in Neuss, Düsseldorf and Duisburg, we at Physio
-            Lüpke-Okocha have been offering neurological physiotherapy (KG-CNS
+            Lüpke-Okocha have been offering neurological physiotherapy (KG-ZNS
             after PNF) for several years.
           </b>
           <div className={Style.desc}>

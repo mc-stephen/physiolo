@@ -8,7 +8,7 @@ export default function Duisburg() {
   const teams: team[] = [
     {
       image: "",
-      name: "Mpheza Christine,\bLÜPKE-OKOCHA",
+      name: "Mpheza Christine,\nLÜPKE-OKOCHA",
       skill: ["Inhaberin", " Bachelor of physiotherapy"],
     },
     {
@@ -24,12 +24,12 @@ export default function Duisburg() {
     {
       image: "",
       name: "Denise Groß",
-      skill: ["Dusseldorf Standortleiterin", "\nPhysiotherapeutin"],
+      skill: ["Duisburg Standortleiterin", "\nPhysiotherapeutin"],
     },
     {
       image: "",
       name: "Jean Paul ONANA",
-      skill: ["Nuess Standortleiter", "\bPhysiotherapeut"],
+      skill: ["Nuess Standortleiter", "\nPhysiotherapeut"],
     },
   ];
   return (
