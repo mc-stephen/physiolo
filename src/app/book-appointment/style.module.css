@@ -52,23 +52,26 @@
                     line-height: 26px;
                     font-size: 16px;
                     color: #656364;
+                    margin-bottom: 50px;
                 }
-                > .featureButton{
-                    padding: 18px 25px;
-                    transition: all 0.3s;
+                > .featureButton, > .featureButton a{
                     border-radius: 6px;
-                    margin-top: 50px;
                     text-transform: uppercase;
                     font-size: 14px;
-                    line-height: 14px;
                     font-weight: 600;
                     letter-spacing: 0.6px;
-                    cursor: pointer;
-                    text-align: center;
-                    display: inline-block;
+                    display: block;
                     color: var(--primary-color);
                     background-color: var(--brand-color);
                     border: none;
+                    outline: none;
+                }
+                > .featureButton a{
+                    padding: 18px 25px;
+                }
+                > .featureButton:hover, .featureButton a:hover{
+                    color: #fff;
+                    background: #000;
                 }
             }
         }

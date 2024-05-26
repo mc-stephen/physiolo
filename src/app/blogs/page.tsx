@@ -6,73 +6,49 @@ import Styles from "./blog.module.css";
 import Image from "next/image";
 import blogImage from "/public/image/blog-image.jpg";
 import Link from "next/link";
-
+import blogData from "./blog-data";
 
 export default function Blog() {
-    return (
-      <main className={Styles.blog}>
-        <BodyHeader
-          pageTitle={"BLOG"}
-          imageAlt={"Blog Image"}
-          pagePath={"HOME / BLOG"}
-          imageSource={profilePic}
-        />
-        
-        <section>
-            <div className={Styles.blogPost}>
-                <div className={Styles.imageBox}>
-                    <Image 
-                    className={Styles.blogImage} 
-                    src= {blogImage}
-                    alt={"Blog Images"}
-                    />
-                </div>
-                <div className={Styles.blogInfo}> 
-                    <ul className={Styles.blogList}>
-                            <li className={Styles.blogListItem}><a className={Styles.blogListLink} href="">General</a></li>
-                            <li className={Styles.blogListItem}><a className={Styles.blogListLink} href="">Health</a></li>
-                            <li className={Styles.blogListItem}><a className={Styles.blogListLink} href="">Insights</a></li>
-                            <li className={Styles.blogListItem}><a className={Styles.blogListLink}href="">Life</a></li>
-                            <li className={Styles.blogListItem}><a className={Styles.blogListLink}href="">Psychology</a></li>
-                            <li className={Styles.blogListItem}><a className={Styles.blogListLink}href="">Therapy</a></li>
-                            <li className={Styles.blogListItem}><a className={Styles.blogListLink}href="">Treatments</a></li>
-                            <li className={Styles.blogListItem}><a className={Styles.blogListLink}href="">Uncategories</a></li>
-                    </ul>
-                    <h2 className={Styles.blogTitle}>Sports therapy treatments</h2>
-                    <p className={Styles.blogMeta}><i>ADMIN / JUNE 20, 2023</i></p>
-                    <p className={Styles.blogContentIntro}>Our sports therapy treatments are designed to help you optimize your athletic performance and prevent injuries. No matter whether you...</p>
-                    <Link href="/blogs/slug"  className={Styles.blogButton}>
-                        <button className={Styles.blogButton}>Read More</button>
-                    </Link>
-                </div>
+  return (
+    <main className={Styles.blog}>
+      <BodyHeader
+        pageTitle={"BLOG"}
+        imageAlt={"Blog Image"}
+        pagePath={"HOME / BLOG"}
+        imageSource={profilePic}
+      />
+      <section className={Styles.bodyCont}>
+        {blogData.map((val, i) => {
+          return (
+            <div key={i} className={Styles.blogPost}>
+              <Image
+                className={Styles.blogImage}
+                src={blogImage}
+                alt={"Blog Images"}
+              />
+              <div className={Styles.blogInfo}>
+                <li className={Styles.blogListItem}>
+                  {val.tags.map((val, i) => {
+                    return (
+                      <Link key={i} className={Styles.blogListLink} href="#">
+                        {val}
+                      </Link>
+                    );
+                  })}
+                </li>
+                <b className={Styles.blogTitle}>{val.title}</b>
+                <span className={Styles.blogMeta}>
+                  {val.author} / {val.dateCreated}
+                </span>
+                <p className={Styles.blogContentIntro}>{val.description}</p>
+                <Link href={val.url} className={Styles.blogButton}>
+                  <button className={Styles.blogButton}>Read More</button>
+                </Link>
+              </div>
             </div>
-            <div className={Styles.blogPost}>
-                <div className={Styles.imageBox}>
-                    <Image 
-                    className={Styles.blogImage} 
-                    src= {blogImage}
-                    alt={"Blog Images"}
-                    />
-                </div>
-                <div className={Styles.blogInfo}>
-                    <ul className={Styles.blogList}>
-                        <li className={Styles.blogListItem}><a className={Styles.blogListLink} href="">Health</a></li>
-                        <li className={Styles.blogListItem}><a className={Styles.blogListLink} href="">Life</a></li>
-                        <li className={Styles.blogListItem}><a className={Styles.blogListLink} href="">Psychology</a></li>
-                        <li className={Styles.blogListItem}><a className={Styles.blogListLink} href="">Therapy</a></li>
-                        <li className={Styles.blogListItem}><a className={Styles.blogListLink} href="">Treatments</a></li>
-                        <li className={Styles.blogListItem}><a className={Styles.blogListLink} href="">Uncategories</a></li>
-                    </ul>
-                    <h2 className={Styles.blogTitle}>The benefits of manual therapy: Effective pain relief and improved mobility for an active life</h2>
-                    <p className={Styles.blogMeta}><i>ADMIN / JUNE 20, 2023</i></p>
-                    <p className={Styles.blogContentIntro}>Manual therapy is a proven treatment method that aims to relieve pain and restore mobility. In this article...</p>
-                    <Link href="/blogs/slug"  className={Styles.blogButton}>
-                        <button className={Styles.blogButton}>Read More</button>
-                    </Link>
-                </div>
-            </div>
-        </section>
-        </main>
-
-    );
+          );
+        })}
+      </section>
+    </main>
+  );
 }
