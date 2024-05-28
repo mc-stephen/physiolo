@@ -7,6 +7,7 @@ import Style from "./header.module.css";
 import { useEffect, useState } from "react";
 import HeaderLinks, { HeaderLinksInterface } from "./header_pages_data";
 import LogoImage from "../../../public/image/physio-logo.png";
+import LocaleSwitcher from "@/widget/local_switcher/local_switcher";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,12 +58,12 @@ function TopHeader() {
         <Link href={whatsapp} className={Style.link}>
           <i className="fa fa-whatsapp" aria-hidden="true"></i>
         </Link>
-        <select>
+        {/* <select>
           <option hidden>Select Langs</option>
           <option value="en">English</option>
           <option value="de">Germany</option>
           <option value="es">Spanish</option>
-        </select>
+        </select> */}
       </aside>
     </section>
   );

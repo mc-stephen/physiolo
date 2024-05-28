@@ -7,7 +7,7 @@
     "lint": "next lint",
     "start": "next start",
     "build": "next build",
-    "dev": "cross-env i18nexus pull && next dev"
+    "dev": "cross-env next dev"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",

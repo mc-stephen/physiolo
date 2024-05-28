@@ -1,0 +1,25 @@
+{
+  "home": "Home",
+  "service": "LEISTUNGEN",
+  "jobs": "Jobs",
+  "blog": "Blog",
+  "current": "AKTUELLE",
+  "photo_gallery": "Fotogalerie",
+  "contact": "KONTAKT",
+  "data_protection": "DATENSCHUTZ",
+  "cookie_policy": "Cookie Policy (EU)",
+  "call_now": "JETZT ANRUFEN",
+  "meeting": "Termin",
+  "services": {
+    "bobath": "KG CNS, PNF/BOBATH",
+    "physiotherapy": "KRANKENGYMNASTIK",
+    "drainage": "MANUELLE LYMPHDRAINAGE",
+    "massages": "Massagen",
+    "cdm": "CDM",
+    "athletes": "AUFBAU UND TRAINING VON SPORTLERN",
+    "cryotherapy": "KÄLTE / KRYOTHERAPIE",
+    "heat_therapy": "WÄRMETHERAPIE",
+    "sports_therapy": "SPORTTHERAPIE",
+    "manual_therapy": "Manuelle Therapie"
+  }
+}
