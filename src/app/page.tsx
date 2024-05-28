@@ -18,6 +18,7 @@ import homeIcon3 from "/public/image/home/reflexology.png";
 import { Navigation, Autoplay, A11y } from "swiper/modules";
 import appointmentImg from "../../public/image/home-Image.jpg";
 import sliderImage1 from "/public/image/sport-therapy-header.jpg";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const sliderImages = [sliderImage1, sliderImage2, sliderImage3, sliderImage4];

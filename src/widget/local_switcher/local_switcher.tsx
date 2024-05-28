@@ -1,30 +1,25 @@
-"use client";
+"use server";
 
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import selectedLocales, {
+  LocaleContext,
+  deLocales,
+  enLocales,
+} from "@/contexts/translation-context";
 
 export default function LocaleSwitcher() {
-  const router = useRouter();
-  const { locale, locales, defaultLocale } = router;
+  const { locale, setLocale } = useContext(LocaleContext);
 
-  const changeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value;
-    router.push(router.pathname, router.asPath, { locale: newLocale });
+  const changeToEnglish = () => {
+    setLocale(enLocales);
   };
 
-  useEffect(() => {
-    if (!locale) {
-      router.push(router.pathname, router.asPath, { locale: defaultLocale });
-    }
-  }, [locale, router, defaultLocale]);
-
   return (
-    <select onChange={changeLanguage} defaultValue={locale}>
-      {locales?.map((loc) => (
-        <option key={loc} value={loc}>
-          {loc}
-        </option>
-      ))}
+    <select onChange={() => changeToEnglish} defaultValue="">
+      <option hidden>Select Langs</option>
+      <option value="en">English</option>
+      <option value="de">Germany</option>
+      <option value="es">Spanish</option>
     </select>
   );
 }

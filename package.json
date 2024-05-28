@@ -31,7 +31,6 @@
     "cross-env": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "^14.2.3",
-    "i18nexus-cli": "^3.4.0",
     "typescript": "5.4.2"
   }
 }
