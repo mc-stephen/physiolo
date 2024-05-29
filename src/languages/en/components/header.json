@@ -1,0 +1,29 @@
+{
+  "home": "Home",
+  "service": "Services",
+  "jobs": "Jobs",
+  "blog": "Blog",
+  "team": "Team",
+  "about_us": "About US",
+  "management": "Management",
+  "practice": "practice",
+  "current": "Current",
+  "photo_gallery": "Photo Gallery",
+  "contact": "Contact",
+  "data_protection": "Data Protection",
+  "cookie_policy": "Cookie Policy (EU)",
+  "call_now": "Call Now",
+  "book_appointment": "Book Appointment",
+  "services": {
+    "bobath": "KG CNS, PNF/BOBATH",
+    "physiotherapy": "Physiotherapy",
+    "drainage": "Manual Lymph Drainage",
+    "massages": "Massages",
+    "cdm": "CDM",
+    "athletes": "Athlete Training and Conditioning",
+    "cryotherapy": "Cryotherapy",
+    "heat_therapy": "Heat Therapy",
+    "sports_therapy": "Sports Therapy",
+    "manual_therapy": "Manual Therapy"
+  }
+}

@@ -1,31 +1,34 @@
 "use client";
 
 import Link from "next/link";
+import { useContext } from "react";
 import Styles from "./services.module.css";
 import img from "/public/image/page-header.jpg";
 import BodyHeader from "@/components/body-header/body-header";
+import { LocaleContext, LocaleType } from "@/contexts/translation-context";
 
 export default function Services() {
+  const { locale } = useContext(LocaleContext);
   return (
     <main className={Styles.services}>
       <BodyHeader
-        pageTitle={"SERVICES"}
-        imageAlt={"services img"}
-        pagePath={"Home / Services"}
         imageSource={img}
+        imageAlt={"services img"}
+        pageTitle={locale.services_page_title}
+        pagePath={"Home / " + locale.services_page_title}
       />
       <section className={Styles.section}>
-        <span className={Styles.label}>SERVICES</span>
+        <span className={Styles.label}>{locale.services_page_title}</span>
         <b className={Styles.title}>PHYSIO LÜPKE-OKOCHA SERVICES</b>
         <div className={Styles.grid}>
-          {data.map((val, i) => {
+          {data(locale).map((val, i) => {
             return (
               <div key={i} className={Styles.servicesCont}>
                 <div className={Styles.img}></div>
                 <b className={Styles.title}>{val.title}</b>
                 <span className={Styles.msg}>{val.message}</span>
                 <Link href={`/services${val.path}`} className={Styles.button}>
-                  <input type="button" value="Read More" />
+                  <input type="button" value={locale.services_read_more} />
                 </Link>
               </div>
             );
@@ -49,83 +52,59 @@ interface Services {
 //==========================
 // SERVICES
 //==========================
-const data: Services[] = [
+const data = (locale: LocaleType): Services[] => [
   {
     icon: "",
     path: "/bobath",
-    title: "KG-ZNS / PNF/BOBATH",
-    message: `Multiple sclerosis, Parkinson's disease, paraplegia, traumatic 
-      brain injury, stroke, joint surgery, sports accidents, facial, oral and 
-      swallowing problems (including jaw problems), back pain`,
+    title: locale.services.bobath,
+    message: locale.services_bobath_desc,
   },
   {
     icon: "",
     path: "/physiotherapy",
-    title: "PHYSIOTHERAPY",
-    message: `Fractures, use of artificial joints, amputations, muscle and 
-      tendon tears, strengthening and stabilization of patients, treatment 
-      after accidents or long-term illnesses, reintegration into work, 
-      osteoarthritis, spinal diseases`,
+    title: locale.services.physiotherapy,
+    message: locale.services_physio_desc,
   },
   {
     icon: "",
     path: "/drainage",
-    title: "Manual lymph drainage",
-    message: `Chronic, lymphedema, chronic venous insufficiency, postoperative 
-      swelling, torn muscle fibers, chronic polyarthritis, CRPS (complex regional 
-      pain syndrome), post-stroke hemiplegia swelling, headache`,
+    title: locale.services.drainage,
+    message: locale.services_drainage_desc,
   },
   {
     icon: "",
     path: "/massages",
-    title: "Massages",
-    message: "Healing massages, sports massages, relaxation massages",
+    title: locale.services.massages,
+    message: locale.services_massages_desc,
   },
   {
     icon: "",
     path: "/cmd",
-    title: "CMD",
-    message: `Cranio (skull with upper jaw), mandibular (lower jaw) dysfunction 
-      (functional disorder), muscle, jaw and/or temporomandibular joint function, 
-      problems in the head, neck and shoulder area, cervical spine, jaw joints.`,
+    title: locale.services.cdm,
+    message: locale.services_cmd_desc,
   },
   {
     icon: "",
     path: "/athletes",
-    title: "Development and training of athletes",
-    message: `Common problems experienced by athletes include injuries to the 
-      musculoskeletal system such as strains, knee damage or torn muscle fibers. 
-      These can be prevented or remedied with holistic therapy (heat/cold,
-      physiotherapy and KG).`,
+    title: locale.services.athletes,
+    message: locale.services_athletes_desc,
   },
   {
     icon: "",
     path: "/manual-therapy",
-    title: "Manual therapy",
-    message: `Heat causes muscle relaxation, improves blood circulation and the 
-      elasticity of the collagenous connective tissue and has a 
-      pain-relieving effect.`,
+    title: locale.services.manual_therapy,
+    message: locale.services_manual_desc,
   },
   {
     icon: "",
     path: "/cryotherapy",
-    title: "Cold/cryotherapy",
-    message: `Cold has a pain-relieving and decongestant effect, both for acute 
-      and chronic complaints. In acute injuries, the reduced blood flow caused 
-      by cold reduces the formation of edema.`,
+    title: locale.services.cryotherapy,
+    message: locale.services_cold_desc,
   },
   {
     icon: "",
     path: "/spots-therapy",
-    title: "Sports therapy",
-    message: `We offer personalized sports therapy treatments to improve 
-      athletic performance and prevent injuries.`,
-  },
-  {
-    icon: "",
-    path: "/manual-therapy",
-    title: "Manual therapy",
-    message: `We offer high-quality manual therapy treatments to relieve 
-      pain and restore mobility to help you live a pain-free life.`,
+    title: locale.services.sports_therapy,
+    message: locale.services_sports_desc,
   },
 ];

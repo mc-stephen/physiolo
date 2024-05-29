@@ -1,10 +1,9 @@
 {
   "monday": "Montag",
-  "Tuesday": "Dienstag",
-  "Wednesday": "Mittwoch",
-  "Thursday": "Donnerstag",
-  "Friday": "Freitag",
-  "data_protection": "Datenschutz",
+  "tuesday": "Dienstag",
+  "wednesday": "Mittwoch",
+  "thursday": "Donnerstag",
+  "friday": "Freitag",
   "tel": "Telefon",
   "mobile": "Handy"
 }

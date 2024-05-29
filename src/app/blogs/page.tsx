@@ -1,20 +1,23 @@
 "use client";
 
-import BodyHeader from "@/components/body-header/body-header";
-import profilePic from "/public/image/page-header.jpg";
-import Styles from "./blog.module.css";
-import Image from "next/image";
-import blogImage from "/public/image/blog-image.jpg";
 import Link from "next/link";
+import Image from "next/image";
 import blogData from "./blog-data";
+import { useContext } from "react";
+import Styles from "./blog.module.css";
+import blogImage from "/public/image/blog-image.jpg";
+import profilePic from "/public/image/page-header.jpg";
+import BodyHeader from "@/components/body-header/body-header";
+import { LocaleContext } from "@/contexts/translation-context";
 
 export default function Blog() {
+  const { locale } = useContext(LocaleContext);
   return (
     <main className={Styles.blog}>
       <BodyHeader
-        pageTitle={"BLOG"}
+        pageTitle={locale.blog_page_title}
         imageAlt={"Blog Image"}
-        pagePath={"HOME / BLOG"}
+        pagePath={"HOME / " + locale.blog_page_title}
         imageSource={profilePic}
       />
       <section className={Styles.bodyCont}>

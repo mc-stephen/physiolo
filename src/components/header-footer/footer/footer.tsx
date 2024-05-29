@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { useContext } from "react";
 import Styles from "./footer.module.css";
+import { LocaleContext } from "@/contexts/translation-context";
 
 export default function Footer() {
   return (
@@ -16,6 +18,7 @@ export default function Footer() {
 //
 //====================================
 function FirstFooter() {
+  const { locale } = useContext(LocaleContext);
   return (
     <section className={Styles.firstFooter}>
       <h2 className={Styles.title}>Physio</h2>
@@ -31,53 +34,77 @@ function FirstFooter() {
             <h4 className={Styles.addressHeading}>Neuss</h4>
             <span className={Styles.info}>Büchel 12-14,</span>
             <span className={Styles.info}>41460 Neuss</span>
-            <span className={Styles.info}><b>Phone:</b> 02131-21858</span>
-            <span className={Styles.info}><b>Fax:</b> 02131-3832120</span>
-            <span className={Styles.info}><b>Mobile/WhatsApp:</b> 01579-2471990</span>
-            <span className={Styles.info}><b>E-mail:</b> Neuss@physiolo.de</span>
+            <span className={Styles.info}>
+              <b>Phone:</b> 02131-21858
+            </span>
+            <span className={Styles.info}>
+              <b>Fax:</b> 02131-3832120
+            </span>
+            <span className={Styles.info}>
+              <b>Mobile/WhatsApp:</b> 01579-2471990
+            </span>
+            <span className={Styles.info}>
+              <b>E-mail:</b> Neuss@physiolo.de
+            </span>
           </div>
           <div className={Styles.addressBox}>
             <h4 className={Styles.addressHeading}>Dusseldorf</h4>
             <span className={Styles.info}>Bilker Allee 183,</span>
             <span className={Styles.info}>40217 Düsseldorf</span>
-            <span className={Styles.info}><b>Phone:</b> 0211-345997</span>
-            <span className={Styles.info}><b>Fax:</b> 0211-31125648</span>
-            <span className={Styles.info}><b>Mobile/WhatsApp:</b> 01579-2305865</span>
-            <span className={Styles.info}><b>Email:</b> Duesseldorf@physiolo.de</span>
+            <span className={Styles.info}>
+              <b>Phone:</b> 0211-345997
+            </span>
+            <span className={Styles.info}>
+              <b>Fax:</b> 0211-31125648
+            </span>
+            <span className={Styles.info}>
+              <b>Mobile/WhatsApp:</b> 01579-2305865
+            </span>
+            <span className={Styles.info}>
+              <b>Email:</b> Duesseldorf@physiolo.de
+            </span>
           </div>
           <div className={Styles.addressBox}>
             <h4 className={Styles.addressHeading}>Duisburg</h4>
             <span className={Styles.info}>Düsseldorfer Landstr. 87-89,</span>
             <span className={Styles.info}>47249 Duisburg</span>
-            <span className={Styles.info}><b>Phone:</b> 02037-08317</span>
-            <span className={Styles.info}><b>Fax:</b> 0203-9352874</span>
-            <span className={Styles.info}><b>Mobile/WhatsApp:</b> 01579-2305600</span>
-            <span className={Styles.info}><b>Email:</b> Duisburg@physiolo.de</span>
+            <span className={Styles.info}>
+              <b>Phone:</b> 02037-08317
+            </span>
+            <span className={Styles.info}>
+              <b>Fax:</b> 0203-9352874
+            </span>
+            <span className={Styles.info}>
+              <b>Mobile/WhatsApp:</b> 01579-2305600
+            </span>
+            <span className={Styles.info}>
+              <b>Email:</b> Duisburg@physiolo.de
+            </span>
           </div>
         </div>
-        <hr className={Styles.bottomBorder}/>
+        <hr className={Styles.bottomBorder} />
         <div className={Styles.addressContainer}>
-          <div className={Styles.addressBox1}>
-            <span className={Styles.info}><b>Monday:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.</span>
-            <span className={Styles.info}><b>Tuesday:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.</span>
-            <span className={Styles.info}><b>Wednesday:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.</span>
-            <span className={Styles.info}><b>Thursday:</b> 8 a.m. - 12 p.m., 13:00 - 18:00</span>
-            <span className={Styles.info}><b>Friday:</b> 08:00 - 14:00</span>
-          </div>
-          <div className={Styles.addressBox1}>
-            <span className={Styles.info}><b>Monday:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.</span>
-            <span className={Styles.info}><b>Tuesday: </b>8 a.m. - 12 p.m., 1 p.m. - 6 p.m.</span>
-            <span className={Styles.info}><b>Wednesday:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.</span>
-            <span className={Styles.info}><b>Thursday:</b> 8 a.m. - 12 p.m., 13:00 - 18:00</span>
-            <span className={Styles.info}><b>Friday:</b> 08:00 - 14:00</span>
-          </div>
-          <div className={Styles.addressBox1}>
-            <span className={Styles.info}><b>Monday:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.</span>
-            <span className={Styles.info}><b>Tuesday:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.</span>
-            <span className={Styles.info}><b>Wednesday:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.</span>
-            <span className={Styles.info}><b>Thursday:</b> 8 a.m. - 12 p.m., 13:00 - 18:00</span>
-            <span className={Styles.info}><b>Friday:</b> 08:00 - 14:00</span>
-          </div>
+          {[0, 1, 2].map((val, i) => {
+            return (
+              <div key={i} className={Styles.addressBox1}>
+                <span className={Styles.info}>
+                  <b>{locale.monday}:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.
+                </span>
+                <span className={Styles.info}>
+                  <b>{locale.tuesday}:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.
+                </span>
+                <span className={Styles.info}>
+                  <b>{locale.wednesday}:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.
+                </span>
+                <span className={Styles.info}>
+                  <b>{locale.thursday}:</b> 8 a.m. - 12 p.m., 13:00 - 18:00
+                </span>
+                <span className={Styles.info}>
+                  <b>{locale.friday}:</b> 08:00 - 14:00
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

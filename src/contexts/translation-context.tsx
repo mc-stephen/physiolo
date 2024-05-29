@@ -1,6 +1,8 @@
+"use client";
+
+import { english } from "./english-import/import";
+import { germany } from "./germany-import/import";
 import React, { ReactNode, createContext, useState } from "react";
-import en from "@/languages/en/Header.json";
-import de from "@/languages/de/components/header.json";
 
 // Define types for your locales
 type LocaleType = {
@@ -8,8 +10,8 @@ type LocaleType = {
 };
 
 // Import your JSON files
-const enLocales: LocaleType = { ...en };
-const deLocales: LocaleType = { ...de };
+const enLocales: LocaleType = { ...english };
+const deLocales: LocaleType = { ...germany };
 
 // Define the context type
 type LocaleContextType = {
@@ -24,7 +26,7 @@ const LocaleContext = createContext<LocaleContextType>({
 });
 
 // Provider component
-const SidebarProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+const LocaleProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [locale, setLocale] = useState<LocaleType>(deLocales);
 
   return (
@@ -34,5 +36,6 @@ const SidebarProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   );
 };
 
-export default SidebarProvider;
+export type { LocaleType };
+export default LocaleProvider;
 export { LocaleContext, enLocales, deLocales };

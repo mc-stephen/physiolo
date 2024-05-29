@@ -1,7 +1,7 @@
 .policySection{
-    width: calc(100% - 350px);
     margin: 0 auto;
     font-size: 16px;
+    padding: 50px 10%;
 
     > .policyInfoBox{
         width: 60%;

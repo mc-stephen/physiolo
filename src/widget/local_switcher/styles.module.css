@@ -1,0 +1,18 @@
+.styledDropdown {
+  padding: 5px;
+  color: #333;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  appearance: none; /* Removes default arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23007BFF" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 10px 10px;
+}
+
+.styledDropdown:focus {
+  outline: none;
+}

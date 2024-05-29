@@ -1,25 +1,27 @@
-"use server";
+"use client";
 
-import { useContext, useEffect } from "react";
-import selectedLocales, {
+import Styles from './styles.module.css';
+import { useContext, useState, ChangeEvent } from "react";
+import {
   LocaleContext,
   deLocales,
   enLocales,
 } from "@/contexts/translation-context";
 
 export default function LocaleSwitcher() {
-  const { locale, setLocale } = useContext(LocaleContext);
+  const { setLocale } = useContext(LocaleContext);
+  const [translate, setTranslate] = useState<string>("de");
 
-  const changeToEnglish = () => {
-    setLocale(enLocales);
+  const changeLocale = (event: ChangeEvent<HTMLSelectElement>) => {
+    setTranslate(event.target.value);
+    setLocale(event.target.value === "en" ? enLocales : deLocales);
   };
 
   return (
-    <select onChange={() => changeToEnglish} defaultValue="">
+    <select className={Styles.styledDropdown} onChange={changeLocale} defaultValue={translate}>
       <option hidden>Select Langs</option>
       <option value="en">English</option>
       <option value="de">Germany</option>
-      <option value="es">Spanish</option>
     </select>
   );
 }

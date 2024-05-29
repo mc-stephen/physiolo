@@ -1,18 +1,21 @@
 "use client";
 
-import BodyHeader from "@/components/body-header/body-header";
+import { useContext } from "react";
 import profilePic from "/public/image/page-header.jpg";
+import BodyHeader from "@/components/body-header/body-header";
+import { LocaleContext } from "@/contexts/translation-context";
 
 export default function Current() {
+  const { locale } = useContext(LocaleContext);
   return (
     <main>
       <BodyHeader
-        pageTitle={"Current"}
+        pageTitle={locale.current_page_title}
         imageAlt={"Jobs Image"}
-        pagePath={"Home / Current"}
+        pagePath={"Home / " + locale.current_page_title}
         imageSource={profilePic}
       />
-      <section>Current</section>
+      <section>{locale.current_page_title}</section>
     </main>
   );
 }

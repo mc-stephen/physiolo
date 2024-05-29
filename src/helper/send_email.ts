@@ -1,13 +1,12 @@
 "use server";
 
 import "dotenv/config";
-import dotenv from "dotenv";
 import { configDotenv } from "dotenv";
 import * as nodemailer from "nodemailer";
 import { MailOptions } from "nodemailer/lib/smtp-transport";
 
 /// !TODO
-configDotenv({ path: ["./src/envs/.smtp.env", ".env"] });
+configDotenv({ path: [".env"] });
 
 //============================================
 //

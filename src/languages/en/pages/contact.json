@@ -1,0 +1,12 @@
+{
+  "contact_page_title": "CONTACT",
+  "contact_get_in_contact": "GET IN CONTACT",
+  "contact_your_name": "Your name *",
+  "contact_email_address": "Email address *",
+  "contact_tel": "telephone number",
+  "contact_msg": "message *",
+  "contact_send": "Send Message",
+  "contact_sending": "Sending Message...",
+  "contact_select_local": "Select a support location",
+  "contact_message_sent_success": "Message sent successfully. You will receive a feedback soon."
+}

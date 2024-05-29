@@ -2,7 +2,7 @@
 
 import PublicRoundedSwitch from "@/widget/switch/switch";
 import Style from "./cookie.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 //============================================
@@ -11,6 +11,10 @@ import Link from "next/link";
 export default function Policy() {
   const [showCookieCont, setShowCookieCont] = useState(true);
   const [showCookieSettingCont, setShowCookieSettingCont] = useState(false);
+
+  useEffect(() => {
+    setShowCookieCont(false);
+  }, []);
 
   //
   const showOrHideCookieCont = (val: boolean, click: number) => {

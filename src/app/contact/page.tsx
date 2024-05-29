@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useContext } from "react";
 import Styles from "./contact.module.css";
 import { FormEvent, useState } from "react";
 import GoogleMapLocation from "@/widget/map/map";
@@ -8,9 +9,11 @@ import contactPic from "/public/image/Contact.jpg";
 import { sendEmailHelper } from "@/helper/send_email";
 import profilePic from "/public/image/page-header.jpg";
 import BodyHeader from "@/components/body-header/body-header";
+import { LocaleContext } from "@/contexts/translation-context";
 import userMsgTemplate from "@/template/email_template/user_message";
 
 export default function Contact() {
+  const { locale } = useContext(LocaleContext);
   //====================================
   //
   //====================================
@@ -71,20 +74,22 @@ export default function Contact() {
     <main className={Styles.contact}>
       {/*  */}
       <BodyHeader
-        pageTitle={"Contact"}
         imageAlt={"Jobs Image"}
-        pagePath={"Home / Contact"}
         imageSource={profilePic}
+        pageTitle={locale.contact_page_title}
+        pagePath={"Home / " + locale.contact_page_title}
       />
 
       {/*  */}
       <section className={Styles.contactSection}>
         <Image src={contactPic} alt="contact image" className={Styles.img} />
         <form className={Styles.contactForm} onSubmit={sendEmail}>
-          <b className={Styles.contactFormHeading}>GET IN CONTACT</b>
+          <b className={Styles.contactFormHeading}>
+            {locale.contact_get_in_contact}
+          </b>
           {mailIsSent && (
             <div className={Styles.successBox}>
-              Message sent successfully. You will receive a feedback soon.
+              {locale.contact_message_sent_success}
             </div>
           )}
           <div className={Styles.contactFormInputFieldBox}>
@@ -94,7 +99,7 @@ export default function Contact() {
               className={Styles.contactFormSelect}
               required
             >
-              <option hidden>Select a support location</option>
+              <option hidden>{locale.contact_select_local}</option>
               {locations.map((location) => (
                 <option key={location.label} value={location.label}>
                   {location.label}
@@ -104,33 +109,33 @@ export default function Contact() {
             <input
               type="text"
               name="name"
-              placeholder="Your name*"
+              placeholder={locale.contact_your_name}
               className={Styles.contactFormInput}
               required
             />
             <input
               type="email"
               name="email"
-              placeholder="Email address*"
+              placeholder={locale.contact_email_address}
               className={Styles.contactFormInput}
               required
             />
             <input
               type="tel"
               name="phone"
-              placeholder="Telephone number"
+              placeholder={locale.contact_tel}
               className={Styles.contactFormInput}
             />
             <textarea
               rows={5}
               cols={50}
               name="message"
-              placeholder="Message*"
+              placeholder={locale.contact_msg}
               className={Styles.contactFormTextarea}
               required
             />
             <button type="submit" className={Styles.contactFormButton}>
-              {isSendingMail ? "Sending Message..." : "SEND MESSAGE"}
+              {isSendingMail ? locale.contact_sending : locale.contact_send}
             </button>
           </div>
         </form>

@@ -1,0 +1,12 @@
+{
+  "contact_page_title": "KONTAKT",
+  "contact_get_in_contact": "KONTAKT AUFNEHMEN",
+  "contact_your_name": "Ihr Name *",
+  "contact_email_address": "E-Mail-Adresse *",
+  "contact_tel": "Telefonnummer",
+  "contact_msg": "Nachricht *",
+  "contact_send": "Nachricht senden",
+  "contact_sending": "Nachricht wird gesendet...",
+  "contact_select_local": "Wählen Sie einen Unterstützungsstandort",
+  "contact_message_sent_success": "Nachricht erfolgreich gesendet. Sie erhalten in Kürze eine Rückmeldung."
+}

@@ -2,13 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import Search from "../search/search";
 import Style from "./header.module.css";
+import LogoImage from "/public/image/physio-logo.png";
 import { useContext, useEffect, useState } from "react";
-import HeaderLinks, { HeaderLinksInterface } from "./header_pages_data";
-import LogoImage from "../../../public/image/physio-logo.png";
-import LocaleSwitcher from "@/widget/local_switcher/local_switcher";
 import { LocaleContext } from "@/contexts/translation-context";
+import LocaleSwitcher from "@/widget/local_switcher/local_switcher";
+import HeaderLinks, { HeaderLinksInterface } from "./header_pages_data";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,13 +58,7 @@ function TopHeader() {
         <Link href={whatsapp} className={Style.link}>
           <i className="fa fa-whatsapp" aria-hidden="true"></i>
         </Link>
-        {/* <LocaleSwitcher /> */}
-        {/* <select>
-          <option hidden>Select Langs</option>
-          <option value="en">English</option>
-          <option value="de">Germany</option>
-          <option value="es">Spanish</option>
-        </select> */}
+        <LocaleSwitcher />
       </aside>
     </section>
   );
@@ -75,7 +68,7 @@ function TopHeader() {
 //
 //====================================
 function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
-  const { locale, setLocale } = useContext(LocaleContext);
+  const { locale } = useContext(LocaleContext);
   return (
     <section
       className={`${Style.bottomHeader} ${isScrolled ? Style.fixedHeader : ""}`}
@@ -84,7 +77,7 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
         <Image src={LogoImage} alt="physiolo-logo" className={Style.img} />
       </Link>
       <ul className={Style.navBarItems}>
-        {HeaderLinks.map((val) => {
+        {HeaderLinks(locale).map((val) => {
           return (
             <li key={val.label} className={Style.navItem}>
               <Link href={val.link} className={Style.label}>
@@ -127,7 +120,7 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
           </svg>
         </div>
         <div className={Style.navPhoneInfo}>
-          <p className={Style.navPhoneName}>Call Now</p>
+          <p className={Style.navPhoneName}>{locale.call_now}</p>
           <Link href="tel:02131-21858" className={Style.navPhoneNo}>
             <p>02131-21858</p>
           </Link>
@@ -137,7 +130,7 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
       {/*--------------------Meeting------------------------*/}
       <button className={Style.navButton}>
         <Link href="/book-appointment" className={Style.link}>
-          Book Appointment
+          {locale.book_appointment}
         </Link>
       </button>
     </section>

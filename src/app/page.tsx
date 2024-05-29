@@ -3,12 +3,13 @@
 import "swiper/css";
 import Link from "next/link";
 import "swiper/css/autoplay";
-import Image, { StaticImageData } from "next/image";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useContext } from "react";
 import Style from "./page.module.css";
 import GoogleMapLocation from "@/widget/map/map";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image, { StaticImageData } from "next/image";
 import sliderImage3 from "/public/image/image2.jpg";
 import sliderImage2 from "/public/image/Contact.jpg";
 import homeIcon1 from "/public/image/home/target.png";
@@ -17,36 +18,30 @@ import sliderImage4 from "/public/image/cookie-policy.jpg";
 import homeIcon3 from "/public/image/home/reflexology.png";
 import { Navigation, Autoplay, A11y } from "swiper/modules";
 import appointmentImg from "../../public/image/home-Image.jpg";
+import { LocaleContext } from "@/contexts/translation-context";
 import sliderImage1 from "/public/image/sport-therapy-header.jpg";
-import { useRouter } from "next/router";
 
 export default function Home() {
+  const { locale } = useContext(LocaleContext);
   const sliderImages = [sliderImage1, sliderImage2, sliderImage3, sliderImage4];
   const service: Services[] = [
     {
       icon: homeIcon1,
       path: "/bobath",
-      title: "KG-ZNS / PNF/BOBATH",
-      message: `Multiple sclerosis, Parkinson's disease, paraplegia, traumatic 
-        brain injury, stroke, joint surgery, sports accidents, facial, oral and 
-        swallowing problems (including jaw problems), back pain`,
+      title: locale.bobath,
+      message: locale.bobath_msg,
     },
     {
       icon: homeIcon2,
       path: "/physiotherapy",
-      title: "PHYSIOTHERAPY",
-      message: `Fractures, use of artificial joints, amputations, muscle and 
-        tendon tears, strengthening and stabilization of patients, treatment 
-        after accidents or long-term illnesses, reintegration into work, 
-        osteoarthritis, spinal diseases`,
+      title: locale.physiotherapy,
+      message: locale.physiotherapy_msg,
     },
     {
       icon: homeIcon3,
       path: "/drainage",
-      title: "Manual lymph drainage",
-      message: `Chronic, lymphedema, chronic venous insufficiency, postoperative 
-        swelling, torn muscle fibers, chronic polyarthritis, CRPS (complex regional 
-        pain syndrome), post-stroke hemiplegia swelling, headache`,
+      title: locale.drainage,
+      message: locale.drainage_msg,
     },
   ];
   return (
@@ -80,7 +75,7 @@ export default function Home() {
 
       {/*  */}
       <section className={Style.servicesContainer}>
-        <b className={Style.title}>OUR SERVICES</b>
+        <b className={Style.title}>{locale.our_services}</b>
         <div className={Style.grid}>
           {service.map((val, i) => {
             return (
@@ -95,7 +90,7 @@ export default function Home() {
                 <Link href={`/services${val.path}`} className={Style.link}>
                   <input
                     type="button"
-                    value="Read More"
+                    value={locale.read_more}
                     className={Style.btn}
                   />
                 </Link>
@@ -105,7 +100,7 @@ export default function Home() {
         </div>
         <Link href="/services" className={Style.link}>
           <button type="button" className={Style.btn}>
-            View More Services
+            {locale.show_more}
           </button>
         </Link>
       </section>
@@ -119,11 +114,10 @@ export default function Home() {
         />
         <div className={Style.frontCont}>
           <b className={Style.heading}>
-            An outstanding team is available to help you with your health
-            concerns
+            {locale.outstanding_team}
           </b>
           <Link href="/book-appointment" className={Style.link}>
-            <button className={Style.btn}>MAKE AN APPOINTMENT</button>
+            <button className={Style.btn}>{locale.make_an_appointment}</button>
           </Link>
         </div>
       </section>

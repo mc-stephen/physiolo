@@ -1,10 +1,9 @@
 import "./globals.css";
 import Script from "next/script";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/footer";
 import Policy from "@/components/cookie/cookie";
+import LocaleProvider from "@/contexts/translation-context";
+import HeaderFooter from "@/components/header-footer/header-footer";
 import FloatingBanner from "@/components/floating-banner/floating-banner";
 
 export const metadata: Metadata = {
@@ -17,7 +16,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <head>
@@ -27,11 +25,13 @@ export default function RootLayout({
         ></link>
       </head>
       <body>
-        <Header />
-        {children}
-        <FloatingBanner />
-        <Policy />
-        <Footer />
+        <LocaleProvider>
+          <HeaderFooter>
+            {children}
+            <FloatingBanner />
+            <Policy />
+          </HeaderFooter>
+        </LocaleProvider>
         <Script
           type="text/javascript"
           id="zsiqchat"
