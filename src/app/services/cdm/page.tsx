@@ -1,11 +1,24 @@
 "use client";
 
+import gfm from "remark-gfm";
 import Image from "next/image";
 import Style from "./styles.module.css";
+import ReactMarkdown from "react-markdown";
+import { useContext, useState } from "react";
 import img from "/public/image/page-header.jpg";
+import { readMarkdown } from "@/helper/markdown_reader";
 import BodyHeader from "@/components/body-header/body-header";
+import { LocaleContext } from "@/contexts/translation-context";
 
-export default function Cdm() {
+export default function Cdm() {  const { locale } = useContext(LocaleContext);
+const [markdownContent, setMarkdownContent] = useState("");
+(async () => {
+  const content = await readMarkdown({
+    fileName: "cdm.md",
+    filePath: `src/languages/${locale.data_protect_local}/pages/services/`,
+  });
+  setMarkdownContent(content);
+})();
   return (
     <main className={Style.cdm}>
       <BodyHeader
@@ -16,24 +29,11 @@ export default function Cdm() {
       />
       <section className={Style.body}>
         <Image src={img} className={Style.imgSide} alt="CDM" />
-        <div className={Style.descSide}>
-          <span className={Style.subTitle}>CDM</span>
-          <b className={Style.title}>CDM</b>
-          <div className={Style.desc}>
-            <p>
-              Cranio- (Schädel mit Oberkiefer) mandibuläre (Unterkiefer-)
-              Dysfunktion (Funktionseinschränkung) umfasst alle schmerzhaften
-              und nicht schmerzhaften Zustände, die auf einer Dysregulation der
-              Muskel-, Kiefer- und/oder Kiefergelenksfunktion beruhen. Probleme
-              im Kopf-, Nacken- und Schulterbereich sowie Fehlstellungen der
-              Halswirbelsäule führen oft zu einer Über- oder Fehlbelastung der
-              Kaumuskulatur und der Kiefergelenke. Insbesondere Stress fördert
-              auch CMD. Bei unserer Therapie wird das Kiefergelenk mobilisiert,
-              Schmerzpunkte behandelt, auch die Halswirbelsäule behandelt und
-              die Nackenmuskulatur entspannt.
-            </p>
-          </div>
-        </div>
+
+        {/*   */}
+        <ReactMarkdown className={Style.descSide} remarkPlugins={[gfm]}>
+          {markdownContent}
+        </ReactMarkdown>
       </section>
     </main>
   );

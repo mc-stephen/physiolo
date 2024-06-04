@@ -1,11 +1,25 @@
 "use client";
 
+import gfm from "remark-gfm";
 import Image from "next/image";
 import Style from "./styles.module.css";
+import ReactMarkdown from "react-markdown";
+import { useContext, useState } from "react";
 import img from "/public/image/page-header.jpg";
+import { readMarkdown } from "@/helper/markdown_reader";
 import BodyHeader from "@/components/body-header/body-header";
+import { LocaleContext } from "@/contexts/translation-context";
 
 export default function HeatTherapy() {
+  const { locale } = useContext(LocaleContext);
+  const [markdownContent, setMarkdownContent] = useState("");
+  (async () => {
+    const content = await readMarkdown({
+      fileName: "heatTherapy.md",
+      filePath: `src/languages/${locale.data_protect_local}/pages/services/`,
+    });
+    setMarkdownContent(content);
+  })();
   return (
     <main className={Style.heatTherapy}>
       <BodyHeader
@@ -16,18 +30,11 @@ export default function HeatTherapy() {
       />
       <section className={Style.body}>
         <Image src={img} className={Style.imgSide} alt="HEAT THERAPY" />
-        <div className={Style.descSide}>
-          <span className={Style.subTitle}>HEAT THERAPY</span>
-          <b className={Style.title}>HEAT THERAPY</b>
-          <span className={Style.desc}>
-            Wärme bewirkt eine Muskelentspannung, verbessert die Durchblutung
-            und die Elastizität des kollagenen Bindegewebes und wirkt
-            schmerzlindernd. Wärme wird insbesondere bei Nackenschmerzen,
-            chronischen Rückenschmerzen und Gelenkbeschwerden sowie
-            Muskelverspannungen eingesetzt. Hitze sollte nicht bei entzündlichen
-            Erkrankungen eingesetzt werden.
-          </span>
-        </div>
+        
+        {/*   */}
+        <ReactMarkdown className={Style.descSide} remarkPlugins={[gfm]}>
+          {markdownContent}
+        </ReactMarkdown>
       </section>
     </main>
   );

@@ -17,16 +17,15 @@ export async function sendEmailHelper(params: MailOptions) {
     .then(async (val) => {
       const nodeEnv = process.env.NODE_ENV;
       const nodeEnvIsProd = nodeEnv !== "production";
-      console.log(nodeEnv);
 
       //============================================
       //
       //============================================
       params.from = process.env.SENDER_IDENTITIES;
       const transporter = nodemailer.createTransport({
+        secure: process.env.SECURE === "true",
         host: nodeEnvIsProd ? process.env.HOST : val.smtp.host,
         port: nodeEnvIsProd ? Number(process.env.SMTP_PORT) : val.smtp.port,
-        secure: false,
         auth: {
           user: nodeEnvIsProd ? process.env.USER : val.user,
           pass: nodeEnvIsProd ? process.env.PASS : val.pass,

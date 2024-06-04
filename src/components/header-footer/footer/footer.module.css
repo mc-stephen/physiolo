@@ -1,6 +1,8 @@
 .footer {
+  width: 100vw;
   font-size: 16px;
   line-height: 26px;
+  overflow-x: hidden;
   color: var(--primary-color);
 
   /*=============================*/

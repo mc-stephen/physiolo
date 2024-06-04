@@ -10,20 +10,17 @@ import Style from "./page.module.css";
 import GoogleMapLocation from "@/widget/map/map";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image, { StaticImageData } from "next/image";
-import sliderImage3 from "/public/image/image2.jpg";
-import sliderImage2 from "/public/image/Contact.jpg";
+import sliderImage3 from "/public/image/image3.jpg";
 import homeIcon1 from "/public/image/home/target.png";
 import homeIcon2 from "/public/image/home/massage.png";
-import sliderImage4 from "/public/image/cookie-policy.jpg";
 import homeIcon3 from "/public/image/home/reflexology.png";
 import { Navigation, Autoplay, A11y } from "swiper/modules";
 import appointmentImg from "../../public/image/home-Image.jpg";
 import { LocaleContext } from "@/contexts/translation-context";
-import sliderImage1 from "/public/image/sport-therapy-header.jpg";
 
 export default function Home() {
   const { locale } = useContext(LocaleContext);
-  const sliderImages = [sliderImage1, sliderImage2, sliderImage3, sliderImage4];
+  const sliderImages = [sliderImage3];
   const service: Services[] = [
     {
       icon: homeIcon1,
@@ -62,10 +59,13 @@ export default function Home() {
             return (
               <SwiperSlide key={i}>
                 <Image
-                  className={Style.swiperImage}
                   src={val}
-                  fill={false}
+                  fill={true}
+                  quality={100}
                   alt={i.toString()}
+                  objectFit={"cover"}
+                  unoptimized = {true}
+                  className={Style.swiperImage}
                 />
               </SwiperSlide>
             );

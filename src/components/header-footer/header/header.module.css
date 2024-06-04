@@ -6,11 +6,12 @@
   width: 100%;
   padding: 0 10%;
   position: relative;
+  overflow-x: hidden;
 
   /*----------------------------------*/
   /*  */
   /*----------------------------------*/
-  > .topHeader {
+  >.topHeader {
     width: 100%;
     height: 40px;
     display: flex;
@@ -22,7 +23,7 @@
     justify-content: space-between;
     background: var(--brand-color);
 
-    > .leftAside,
+    >.leftAside,
     .rightAside {
       gap: 20px;
       display: flex;
@@ -30,29 +31,29 @@
       justify-content: center;
     }
 
-    > .leftAside {
-      > .divider {
+    >.leftAside {
+      >.divider {
         width: 2px;
         height: 20px;
         background: var(--secondary-color);
       }
 
-      > .span {
+      >.span {
         display: flex;
         align-items: center;
 
-        > .icon {
+        >.icon {
           font-size: 14px;
           margin-right: 10px;
         }
       }
     }
 
-    > .rightAside {
+    >.rightAside {
       display: flex;
       align-items: center;
 
-      > .link {
+      >.link {
         font-family: 15px;
       }
     }
@@ -61,7 +62,7 @@
   /*----------------------------------*/
   /*  */
   /*----------------------------------*/
-  > .bottomHeader {
+  >.bottomHeader {
     z-index: 1;
     width: 100%;
     height: 80px;
@@ -74,12 +75,12 @@
     background: var(--primary-color);
 
     /*----------------LOGO IMG----------------------*/
-    > .link {
+    >.link {
       height: 100%;
       position: relative;
       margin-right: 20px;
 
-      > .img {
+      >.img {
         height: 100%;
         width: fit-content;
         object-fit: contain;
@@ -88,7 +89,7 @@
     }
 
     /*-----------------NAV BAR---------------------*/
-    > .navBarItems {
+    >.navBarItems {
       gap: 25px;
       z-index: 1;
       height: 100%;
@@ -97,21 +98,21 @@
       position: relative;
       align-items: center;
 
-      > .navItem {
+      >.navItem {
         z-index: 1;
         height: 100%;
         font-weight: 600;
         position: relative;
         letter-spacing: 0.6px;
 
-        > .label {
+        >.label {
           height: 100%;
           display: flex;
           align-items: center;
           text-transform: uppercase;
         }
 
-        > .dropDownMenu {
+        >.dropDownMenu {
           top: 100%;
           z-index: 1;
           display: none;
@@ -125,11 +126,11 @@
           background: var(--primary-color);
           box-shadow: 0 0.5rem 1rem rgb(28, 26, 63, 0.15);
 
-          > .dropDownMenuItem {
+          >.dropDownMenuItem {
             border-radius: 5px;
             border-bottom: 1px solid #eeeeeece;
 
-            > .label {
+            >.label {
               display: block;
               text-wrap: nowrap;
               padding-block: 18px;
@@ -155,7 +156,7 @@
                 border-radius: 5px;
                 border-bottom: 1px solid #eeeeeece;
 
-                > .label {
+                >.label {
                   display: block;
                   text-wrap: nowrap;
                   padding-block: 18px;
@@ -176,20 +177,20 @@
             }
           }
 
-          > .dropDownMenuItem:last-child {
+          >.dropDownMenuItem:last-child {
             border-bottom: none;
           }
 
-          > .dropDownMenuItem:hover {
+          >.dropDownMenuItem:hover {
             color: var(--primary-color);
             transition: all 0.2s linear;
             background: var(--brand-color);
 
-            > .subDropDownMenu {
+            >.subDropDownMenu {
               display: block;
 
-              > .subDropDownMenuItem:hover {
-                > .subDropDownMenu {
+              >.subDropDownMenuItem:hover {
+                >.subDropDownMenu {
                   display: block;
                 }
               }
@@ -198,24 +199,24 @@
         }
       }
 
-      > .navItem:hover {
+      >.navItem:hover {
         color: var(--brand-color);
       }
 
-      > .navItem:hover > .dropDownMenu {
+      >.navItem:hover>.dropDownMenu {
         display: block;
       }
     }
 
-    > .navBarsBox {
+    >.navBarsBox {
       display: none;
     }
 
     /*--------------------------------------*/
-    > .navPhoneBox {
+    >.navPhoneBox {
       display: flex;
 
-      > .navPhoneIcon {
+      >.navPhoneIcon {
         width: 43px;
         height: 43px;
         margin-right: 15px;
@@ -223,19 +224,24 @@
         color: var(--primary-color);
         background: var(--brand-color);
 
-        > .svg {
+        >.svg {
           margin-top: 12px;
           margin-left: 12px;
         }
       }
 
-      > .navPhoneInfo {
+      >.navPhoneInfo {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         text-transform: uppercase;
 
-        > .navPhoneNo {
+        >.navPhoneName {
+          font-weight: bold;
+          color: var(--brand-color);
+        }
+
+        >.navPhoneNo {
           padding-top: 5px;
           font-weight: 600;
           cursor: pointer;
@@ -245,7 +251,7 @@
     }
 
     /*--------------------------------------*/
-    > .navButton {
+    >.navButton {
       border: none;
       cursor: pointer;
       font-size: 15px;
@@ -256,7 +262,7 @@
       color: var(--primary-color);
       transition: all 0.2s linear;
 
-      > .link {
+      >.link {
         width: 100%;
         height: 100%;
         border-radius: 5px;
@@ -264,20 +270,20 @@
         background: var(--grey-black);
       }
 
-      > .link:hover {
+      >.link:hover {
         background-color: var(--brand-color);
       }
     }
   }
 
   /*=========================================*/
-  > .bottomHeader.fixedHeader {
+  >.bottomHeader.fixedHeader {
     top: 0;
     left: 0;
     margin: 0;
     height: 80px;
-    padding: 0px 10%;
     position: fixed;
+    padding: 0px 10%;
     transition: top 0.3s ease;
     box-shadow: 0 0.5rem 1rem rgba(28, 26, 63, 0.15);
     /* Add transition effect for smooth animation */
@@ -289,7 +295,7 @@
     animation-play-state: running;
     animation-timing-function: ease-out;
 
-    > .navPhoneBox {
+    >.navPhoneBox {
       display: none;
     }
   }
@@ -308,91 +314,153 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .header {
-    padding: 0 10px 0 10px;
+/*====================================*/
+/* ANIMATIONS */
+/*====================================*/
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+  }
 
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*====================================*/
+/* ANIMATIONS */
+/*====================================*/
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 0;
+
+    /*  */
     .topHeader {
-      display: none;
+      >.leftAside {
+        display: none;
+      }
+
+      >.rightAside {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+      }
     }
 
+    /*  */
     .bottomHeader {
-      > .navBarItems {
-        position: absolute;
+      padding: 0 15px;
+
+      >.navBarItems.open {
+        display: flex;
+        /* Add transition effect for smooth animation */
+        animation-duration: 0.2s;
+        animation-name: slideRight;
+      }
+
+      >.navBarItems {
+        gap: 0;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 80vw;
         display: none;
+        height: 100dvh;
+        position: fixed;
+        overflow-x: hidden;
         flex-direction: column;
-        top: 100%;
-        height: 380px;
         background-color: var(--primary-color);
         box-shadow: 0 0.5rem 1rem rgb(28, 26, 63, 0.15);
-        gap: 0;
-        z-index: 99;
-        width: 80%;
 
-        > .navItem {
+
+        >.navItem {
           width: 100%;
-          right: 0;
-          left: 0;
+          height: 50px;
 
-          > .label {
-            padding-inline: 10px;
-            padding-block: 10px;
+          >.label {
+            height: 50px;
+            display: flex;
+            padding-left: 20px;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
           }
 
-          > .dropDownMenu {
-            > .dropDownMenuItem {
-              > .subDropDownMenu {
-                left: 100%;
-                top: 0;
-                width: 50%;
+          >.dropDownMenu {
+            top: auto;
+            border: unset;
+            box-shadow: none;
+            position: relative;
+            border-radius: 0px;
+
+            >.dropDownMenuItem {
+              height: 50px;
+              margin-left: 20px;
+              position: relative;
+              border-radius: 0px;
+
+              >.label {
+                height: 50px;
+                display: flex;
+                padding-left: 20px;
+                border-bottom: 1px solid black;
+              }
+
+              >.subDropDownMenu {
+                left: auto;
+                border: unset;
+                display: none;
+                box-shadow: unset;
+                position: relative;
+                border-radius: 0px;
+
+                >.subDropDownMenuItem {
+                  height: 50px;
+                  margin-left: 20px;
+                  border-radius: 0px;
+                  border-bottom: 1px solid black;
+                }
               }
             }
           }
         }
 
-        > .navItem:hover {
-          background-color: var(--brand-color);
-          color: var(--primary-color);
+        >.navItem:hover {
+          height: unset;
+          color: white;
+          position: relative;
+          background: var(--brand-color);
+
+          >.dropDownMenu {
+            >.dropDownMenuItem {
+              height: unset;
+            }
+          }
         }
       }
 
-      > .navBarsBox {
-        display: block;
-        border: 2px solid var(--brand-color);
-        padding: 0 5px;
-        margin-right: 10px;
+      >.navPhoneBox {
+        display: none;
+      }
+
+      >.navButton {
+        display: none;
+      }
+
+      >.navBarsBox {
+        width: 40px;
+        height: 40px;
+        display: flex;
         cursor: pointer;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
 
-        > .navBars {
-          height: 100%;
+        >.navBars {
+          font-size: 30px;
           color: var(--brand-color);
-          font-size: 35px;
         }
       }
-    }
-
-    > .bottomHeader.fixedHeader {
-      padding: 0 10px 0 10px;
-    }
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .header {
-    padding: 0 0 0 10px;
-
-    .bottomHeader {
-      > .navPhoneBox {
-        display: none;
-      }
-
-      > .navButton {
-        display: none;
-      }
-    }
-
-    > .bottomHeader.fixedHeader {
-      padding: 0 0 0 10px;
     }
   }
 }

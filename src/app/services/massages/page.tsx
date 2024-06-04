@@ -1,11 +1,25 @@
 "use client";
 
+import gfm from "remark-gfm";
 import Image from "next/image";
 import Style from "./styles.module.css";
+import ReactMarkdown from "react-markdown";
+import { useContext, useState } from "react";
 import img from "/public/image/page-header.jpg";
+import { readMarkdown } from "@/helper/markdown_reader";
 import BodyHeader from "@/components/body-header/body-header";
+import { LocaleContext } from "@/contexts/translation-context";
 
 export default function Massages() {
+  const { locale } = useContext(LocaleContext);
+  const [markdownContent, setMarkdownContent] = useState("");
+  (async () => {
+    const content = await readMarkdown({
+      fileName: "massages.md",
+      filePath: `src/languages/${locale.data_protect_local}/pages/services/`,
+    });
+    setMarkdownContent(content);
+  })();
   return (
     <main className={Style.massages}>
       <BodyHeader
@@ -16,34 +30,11 @@ export default function Massages() {
       />
       <section className={Style.body}>
         <Image src={img} className={Style.imgSide} alt="MASSAGES" />
-        <div className={Style.descSide}>
-          <span className={Style.subTitle}>MASSAGES</span>
-          <b className={Style.title}>MASSAGES</b>
-          <div className={Style.desc}>
-            <p>
-              Massagen dienen der mechanischen Beeinflussung von Haut,
-              Bindegewebe und Muskulatur mit Hilfe von Dehnungs-, Zug- und
-              Druckreizen.
-            </p>
-            <p>
-              Die Wirkung der Massage erstreckt sich von der behandelten
-              Körperpartie auf den gesamten Organismus und schließt auch die
-              Psyche mit ein. Wir behandeln alle Arten von Rückenproblemen,
-              Sportmassagen und auch Entspannungsmassagen.
-            </p>
-            <p>
-              Muskelverhärtungen werden durch unsere klassischen
-              Massagetherapien reduziert oder ganz beseitigt
-            </p>
-            <p>
-              <ul style={{ marginLeft: 40 }}>
-                <li>Therapeutische Massagen</li>
-                <li>Sportmassagen</li>
-                <li>Entspannungsmassagen</li>
-              </ul>
-            </p>
-          </div>
-        </div>
+
+        {/*   */}
+        <ReactMarkdown className={Style.descSide} remarkPlugins={[gfm]}>
+          {markdownContent}
+        </ReactMarkdown>
       </section>
     </main>
   );

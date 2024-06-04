@@ -1,11 +1,25 @@
 "use client";
 
+import gfm from "remark-gfm";
 import Image from "next/image";
 import Style from "./styles.module.css";
+import ReactMarkdown from "react-markdown";
+import { useContext, useState } from "react";
 import img from "/public/image/page-header.jpg";
+import { readMarkdown } from "@/helper/markdown_reader";
 import BodyHeader from "@/components/body-header/body-header";
+import { LocaleContext } from "@/contexts/translation-context";
 
 export default function Cryotherapy() {
+  const { locale } = useContext(LocaleContext);
+  const [markdownContent, setMarkdownContent] = useState("");
+  (async () => {
+    const content = await readMarkdown({
+      fileName: "cryotherapy.md",
+      filePath: `src/languages/${locale.data_protect_local}/pages/services/`,
+    });
+    setMarkdownContent(content);
+  })();
   return (
     <main className={Style.cryotherapy}>
       <BodyHeader
@@ -16,18 +30,11 @@ export default function Cryotherapy() {
       />
       <section className={Style.body}>
         <Image src={img} className={Style.imgSide} alt="COLD / CRYOTHERAPY" />
-        <div className={Style.descSide}>
-          <span className={Style.subTitle}>COLD / CRYOTHERAPY</span>
-          <b className={Style.title}>COLD / CRYOTHERAPY</b>
-          <div className={Style.desc}>
-            <p>
-              Kälte wirkt schmerzlindernd und abschwellend, sowohl bei akuten
-              als auch bei chronischen Beschwerden. Bei akuten Verletzungen
-              reduziert die durch Kälte verursachte Minderdurchblutung die
-              Ödembildung.
-            </p>
-          </div>
-        </div>
+
+        {/*   */}
+        <ReactMarkdown className={Style.descSide} remarkPlugins={[gfm]}>
+          {markdownContent}
+        </ReactMarkdown>
       </section>
     </main>
   );

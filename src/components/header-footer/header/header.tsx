@@ -35,6 +35,8 @@ function TopHeader() {
   const whatsapp = "https://wa.me/+4915792471990";
   const instagram = "https://www.instagram.com/physio_lue_ok/";
   const facebook = "https://www.facebook.com/profile.php?id=100057791464478";
+  const tiktok = "https://www.tiktok.com/@physiolpkeokocha?_t=8mtD9Lphn5l&_r=1";
+  const youtube = "";
   return (
     <section className={Style.topHeader}>
       <aside className={Style.leftAside}>
@@ -53,10 +55,16 @@ function TopHeader() {
           <i className="fa fa-facebook" aria-hidden="true"></i>
         </Link>
         <Link href={instagram} className={Style.link}>
-          <i className="fa fa-instagram" aria-hidden="true"></i>
+          <i className="fa-brands fa-square-instagram"></i>
         </Link>
         <Link href={whatsapp} className={Style.link}>
-          <i className="fa fa-whatsapp" aria-hidden="true"></i>
+          <i className="fa-brands fa-square-whatsapp"></i>
+        </Link>
+        <Link href={youtube} className={Style.link}>
+          <i className="fa fa-youtube" aria-hidden="true"></i>
+        </Link>
+        <Link href={tiktok} className={Style.link}>
+          <i className="fa-brands fa-tiktok"></i>
         </Link>
         <LocaleSwitcher />
       </aside>
@@ -69,14 +77,15 @@ function TopHeader() {
 //====================================
 function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
   const { locale } = useContext(LocaleContext);
+  const [navIsOpen, setNavIsOpen] = useState(false);
   return (
     <section
-      className={`${Style.bottomHeader} ${isScrolled ? Style.fixedHeader : ""}`}
+      className={`${Style.bottomHeader} ${isScrolled && Style.fixedHeader}`}
     >
       <Link href="/" className={Style.link}>
         <Image src={LogoImage} alt="physiolo-logo" className={Style.img} />
       </Link>
-      <ul className={Style.navBarItems}>
+      <ul className={`${Style.navBarItems} ${navIsOpen && Style.open}`}>
         {HeaderLinks(locale).map((val) => {
           return (
             <li key={val.label} className={Style.navItem}>
@@ -96,10 +105,11 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
       </ul>
 
       {/*---------------------------------Bars Icon ------------------- */}
-      <div className={Style.navBarsBox}>
-        <span className={Style.navBars}>
-          <i className="fa fa-bars" aria-hidden="true"></i>
-        </span>
+      <div
+        className={Style.navBarsBox}
+        onClick={() => setNavIsOpen(!navIsOpen)}
+      >
+        <i className={`fa fa-bars ${Style.navBars}`} aria-hidden="true"></i>
       </div>
 
       {/*-------------------Phone Icon-----------------------------*/}

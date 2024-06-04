@@ -35,9 +35,5 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-<!-- languages -->
-<!-- English -->
-<!-- German (should be the default) -->
-<!-- Spanish -->
-
-<!-- when hover over the management / teams, let a container show there email and phone -->
+<!-- the home slider should have some certain image -->
+<!-- mobile version -->

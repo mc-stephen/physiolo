@@ -63,7 +63,7 @@ export default function Contact() {
         (form.elements.namedItem("phone") as HTMLInputElement).value = "";
         (form.elements.namedItem("message") as HTMLInputElement).value = "";
       })
-      .catch((err) => console.log(err))
+      .catch((err) => console.log(err.message))
       .finally(() => setIsSendingMail(false));
   }
 

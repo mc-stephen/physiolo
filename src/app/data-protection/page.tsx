@@ -14,11 +14,11 @@ export default function Protection() {
   const { locale } = useContext(LocaleContext);
   const [markdownContent, setMarkdownContent] = useState("");
   (async () => {
-    const dataProtectionMd = await readMarkdown({
+    const content = await readMarkdown({
       fileName: "data-protection.md",
       filePath: `src/languages/${locale.data_protect_local}/pages`,
     });
-    setMarkdownContent(dataProtectionMd);
+    setMarkdownContent(content);
   })();
   return (
     <main className={Styles.blog}>

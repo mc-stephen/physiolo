@@ -19,10 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        ></link>
       </head>
       <body>
         <LocaleProvider>
@@ -32,6 +28,7 @@ export default function RootLayout({
             <Policy />
           </HeaderFooter>
         </LocaleProvider>
+        <Script src="https://kit.fontawesome.com/7b9eb9d529.js" crossOrigin="anonymous"></Script>
         <Script
           type="text/javascript"
           id="zsiqchat"
