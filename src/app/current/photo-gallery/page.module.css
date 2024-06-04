@@ -28,7 +28,7 @@
         }
         
         > .galleryImg{
-            object-fit: cover;
+            object-fit: fill;
             object-position: center;
         }
     }

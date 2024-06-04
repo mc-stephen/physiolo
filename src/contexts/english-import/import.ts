@@ -3,6 +3,7 @@ import jobs_en from "@/languages/en/pages/jobs.json";
 import blog_en from "@/languages/en/pages/blog.json";
 import contact_en from "@/languages/en/pages/contact.json";
 import current_en from "@/languages/en/pages/current.json";
+import about_us_en from "@/languages/en/pages/about-us.json";
 import services_en from "@/languages/en/pages/services.json";
 import header_en from "@/languages/en/components/header.json";
 import footer_en from "@/languages/en/components/footer.json";
@@ -18,6 +19,7 @@ export const english = {
   ...blog_en,
   ...current_en,
   ...contact_en,
+  ...about_us_en,
   ...data_protect_en,
   ...book_appoint_en,
   ...cookie_policy_en,
