@@ -109,7 +109,11 @@ function BottomHeader({ isScrolled }: { isScrolled: boolean }) {
         className={Style.navBarsBox}
         onClick={() => setNavIsOpen(!navIsOpen)}
       >
-        <i className={`fa fa-bars ${Style.navBars}`} aria-hidden="true"></i>
+        {navIsOpen ? (
+          <i className={`fa fa-close ${Style.navBars}`} aria-hidden="true"></i>
+        ) : (
+          <i className={`fa fa-bars ${Style.navBars}`} aria-hidden="true"></i>
+        )}
       </div>
 
       {/*-------------------Phone Icon-----------------------------*/}

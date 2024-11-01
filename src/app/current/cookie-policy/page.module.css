@@ -1,0 +1,19 @@
+.policySection{
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 50px 10%;
+
+    & font{
+        display: block;
+        margin: 15px 0;
+        line-height: 30px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .policySection{
+    width: 100%;
+    padding: 10px;
+  }
+}

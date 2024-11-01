@@ -15,13 +15,13 @@
   "call_now": "Call Now",
   "book_appointment": "Book Appointment",
   "services": {
-    "bobath": "KG CNS, PNF/BOBATH",
+    "bobath": "KG ZNS, PNF/BOBATH",
     "physiotherapy": "Physiotherapy",
     "drainage": "Manual Lymph Drainage",
     "massages": "Massages",
     "cdm": "CDM",
     "athletes": "Athlete Training and Conditioning",
-    "cryotherapy": "Cryotherapy",
+    "cryotherapy": "Cold / Cryotherapy",
     "heat_therapy": "Heat Therapy",
     "sports_therapy": "Sports Therapy",
     "manual_therapy": "Manual Therapy"

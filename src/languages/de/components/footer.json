@@ -1,9 +1,11 @@
 {
-  "monday": "Montag",
-  "tuesday": "Dienstag",
-  "wednesday": "Mittwoch",
-  "thursday": "Donnerstag",
-  "friday": "Freitag",
+  "monday": "Montag: 8:00 - 12:00, 13:00 - 18:00",
+  "tuesday": "Dienstag 8:00 - 12:00, 13:00 - 18:00",
+  "wednesday": "Mittwoch 8:00 - 12:00, 13:00 - 18:00",
+  "thursday": "Donnerstag 8:00 - 12:00, 13:00 - 18:00",
+  "friday": "Freitag: 8:00 - 14:00",
   "tel": "Telefon",
-  "mobile": "Handy"
+  "mobile": "Handy",
+  "quoted_by": "– Nelson Mandela",
+  "quote": "Der größte Ruhm im Leben besteht nicht darin, niemals zu fallen, sondern jedes Mal wieder aufzustehen, wenn wir fallen."
 }

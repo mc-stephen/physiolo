@@ -35,5 +35,13 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-<!-- the home slider should have some certain image -->
-<!-- mobile version -->
+<!-- 
+https://hygraph.com/pricing
+user: info@physiolo.de
+Pwd: Am1 -->
+
+<!-- About us should be responsive on mobile -->
+<!-- change the x icon for closing the nav to an arrow icon  -->
+<!-- add /current to the hydraph site -->
+
+<!-- in mobile version the teams children are not showing -->

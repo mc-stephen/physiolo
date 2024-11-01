@@ -11,6 +11,7 @@ import GoogleMapLocation from "@/widget/map/map";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image, { StaticImageData } from "next/image";
 import sliderImage3 from "/public/image/image3.jpg";
+import sliderImage from "/public/image/home_slider_img.png";
 import homeIcon1 from "/public/image/home/target.png";
 import homeIcon2 from "/public/image/home/massage.png";
 import homeIcon3 from "/public/image/home/reflexology.png";
@@ -20,7 +21,7 @@ import { LocaleContext } from "@/contexts/translation-context";
 
 export default function Home() {
   const { locale } = useContext(LocaleContext);
-  const sliderImages = [sliderImage3];
+  const sliderImages = [sliderImage, sliderImage3];
   const service: Services[] = [
     {
       icon: homeIcon1,
@@ -57,16 +58,14 @@ export default function Home() {
         >
           {sliderImages.map((val, i) => {
             return (
-              <SwiperSlide key={i}>
-                <Image
-                  src={val}
-                  fill={true}
-                  quality={100}
-                  alt={i.toString()}
-                  objectFit={"cover"}
-                  unoptimized = {true}
-                  className={Style.swiperImage}
-                />
+              <SwiperSlide className={Style.imgSwiperCont} key={i}>
+                  <Image
+                    src={val}
+                    // fill={true}
+                    quality={100}
+                    alt={i.toString()}
+                    className={Style.swiperImage}
+                  />
               </SwiperSlide>
             );
           })}
@@ -113,9 +112,7 @@ export default function Home() {
           alt="message image"
         />
         <div className={Style.frontCont}>
-          <b className={Style.heading}>
-            {locale.outstanding_team}
-          </b>
+          <b className={Style.heading}>{locale.outstanding_team}</b>
           <Link href="/book-appointment" className={Style.link}>
             <button className={Style.btn}>{locale.make_an_appointment}</button>
           </Link>

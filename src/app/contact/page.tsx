@@ -17,9 +17,9 @@ export default function Contact() {
   //====================================
   //
   //====================================
+  const copyEmail = ["info@physiolo.de"];
   const [mailIsSent, setMailIsSent] = useState<boolean>(false);
   const [selectedEmail, setSelectedEmail] = useState<string>("");
-  const copyEmail = ["info@physiolo.de", "stephenugo939@gmail.com"];
   const [isSendingMail, setIsSendingMail] = useState<boolean>(false);
   const locations: SupportEmail[] = [
     { label: "Neuss", email: "neuss@physiolo.de" },
@@ -56,7 +56,7 @@ export default function Contact() {
         message: (form.elements.namedItem("message") as HTMLInputElement).value,
       }),
     })
-      .then((val) => {
+      .then((_) => {
         setMailIsSent(true);
         (form.elements.namedItem("name") as HTMLInputElement).value = "";
         (form.elements.namedItem("email") as HTMLInputElement).value = "";

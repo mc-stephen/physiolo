@@ -16,7 +16,7 @@ export async function sendEmailHelper(params: MailOptions) {
     .createTestAccount()
     .then(async (val) => {
       const nodeEnv = process.env.NODE_ENV;
-      const nodeEnvIsProd = nodeEnv !== "production";
+      const nodeEnvIsProd = nodeEnv === "production";
 
       //============================================
       //

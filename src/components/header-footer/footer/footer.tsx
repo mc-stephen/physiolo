@@ -21,12 +21,11 @@ function FirstFooter() {
   const { locale } = useContext(LocaleContext);
   return (
     <section className={Styles.firstFooter}>
-      <h2 className={Styles.title}>Physio</h2>
+      <h2 className={Styles.title}>Zitat</h2>
       <span className={Styles.desc}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum incidunt,
-        dolore suscipit deserunt corrupti quis aliquid excepturi ex est
-        blanditiis ipsam. Doloribus nemo optio blanditiis, doloremque odio amet
-        vel esse.
+        {locale.quote}
+        <br />
+        <i>{locale.quoted_by}</i>
       </span>
       <div className={Styles.footerAddresses}>
         <div className={Styles.addressContainer}>
@@ -48,7 +47,7 @@ function FirstFooter() {
             </span>
           </div>
           <div className={Styles.addressBox}>
-            <h4 className={Styles.addressHeading}>Dusseldorf</h4>
+            <h4 className={Styles.addressHeading}>Düsseldorf</h4>
             <span className={Styles.info}>Bilker Allee 183,</span>
             <span className={Styles.info}>40217 Düsseldorf</span>
             <span className={Styles.info}>
@@ -88,19 +87,19 @@ function FirstFooter() {
             return (
               <div key={i} className={Styles.addressBox1}>
                 <span className={Styles.info}>
-                  <b>{locale.monday}:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.
+                  <b>{locale.monday}</b>
                 </span>
                 <span className={Styles.info}>
-                  <b>{locale.tuesday}:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.
+                  <b>{locale.tuesday}</b>
                 </span>
                 <span className={Styles.info}>
-                  <b>{locale.wednesday}:</b> 8 a.m. - 12 p.m., 1 p.m. - 6 p.m.
+                  <b>{locale.wednesday}</b>
                 </span>
                 <span className={Styles.info}>
-                  <b>{locale.thursday}:</b> 8 a.m. - 12 p.m., 13:00 - 18:00
+                  <b>{locale.thursday}</b>
                 </span>
                 <span className={Styles.info}>
-                  <b>{locale.friday}:</b> 08:00 - 14:00
+                  <b>{locale.friday}</b>
                 </span>
               </div>
             );
@@ -130,7 +129,7 @@ function BottomFooter() {
   return (
     <section className={Styles.bottomFooter}>
       <span className={Styles.copyright}>
-        Copyright © 2024 All Rights Reserved | PHYSIO LÜPKE-OKOCHA
+        Copyright © 2020 - 2024 All Rights Reserved | PHYSIO LÜPKE-OKOCHA
       </span>
       <div className={Styles.role}>
         {socialMedialLinks.map((val) => {

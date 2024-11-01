@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Policy from "@/components/cookie/cookie";
 import LocaleProvider from "@/contexts/translation-context";
 import HeaderFooter from "@/components/header-footer/header-footer";
-import FloatingBanner from "@/components/floating-banner/floating-banner";
+import FloatingBanner from "@/widget/floating-banner/floating-banner";
 
 export const metadata: Metadata = {
   title: "Physiolo",

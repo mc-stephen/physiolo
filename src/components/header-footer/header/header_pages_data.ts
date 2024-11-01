@@ -57,15 +57,14 @@ const HeaderLinks = (val: LocaleType): Array<HeaderLinksInterface> => {
       link: "/current",
       children: [
         { label: val.photo_gallery, link: "/photo-gallery", children: [] },
+        { label: val.cookie_policy, link: "/cookie-policy", children: [] },
+        { label: val.data_protection, link: "/data-protection", children: [] },
       ],
     },
-    { label: val.contact, link: "/contact", children: [] },
     {
-      label: val.data_protection,
-      link: "/data-protection",
-      children: [
-        { label: val.cookie_policy, link: "/cookie-policy", children: [] },
-      ],
+      label: val.contact,
+      link: "/contact",
+      children: [],
     },
   ];
 };

@@ -34,3 +34,20 @@
         }
     }
 }
+
+/*==========================================*/
+/* MOBILE RESPONSIVENESS */
+/*==========================================*/
+@media screen and (max-width: 800px) {
+    .heatTherapy {
+        >.body {
+            padding: 100px 5%;
+            flex-direction: column;
+
+            >.imgSide,
+            .descSide {
+                width: 100%;
+            }
+        }
+    }
+}

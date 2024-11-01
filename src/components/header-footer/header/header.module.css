@@ -6,7 +6,6 @@
   width: 100%;
   padding: 0 10%;
   position: relative;
-  overflow-x: hidden;
 
   /*----------------------------------*/
   /*  */
@@ -63,6 +62,7 @@
   /*  */
   /*----------------------------------*/
   >.bottomHeader {
+    gap: 20px;
     z-index: 1;
     width: 100%;
     height: 80px;
@@ -72,19 +72,23 @@
     align-items: center;
     color: var(--grey-black);
     justify-content: space-between;
+    justify-content: center;
     background: var(--primary-color);
 
     /*----------------LOGO IMG----------------------*/
     >.link {
+      width: 90px;
       height: 100%;
+      display: flex;
       position: relative;
       margin-right: 20px;
+      align-items: center;
+      justify-content: center;
 
       >.img {
-        height: 100%;
-        width: fit-content;
+        width: 100%;
+        height: fit-content;
         object-fit: contain;
-        padding: 10px 10px 10px 0;
       }
     }
 
@@ -97,6 +101,8 @@
       list-style: none;
       position: relative;
       align-items: center;
+      justify-content: center;
+      width: calc(100% - 90px - 220px - 150px);
 
       >.navItem {
         z-index: 1;
@@ -214,6 +220,7 @@
 
     /*--------------------------------------*/
     >.navPhoneBox {
+      width: 150px;
       display: flex;
 
       >.navPhoneIcon {
@@ -252,26 +259,28 @@
 
     /*--------------------------------------*/
     >.navButton {
+      width: 220px;
+      height: 45px;
       border: none;
+      display: flex;
       cursor: pointer;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
-      line-height: 15px;
+      background: #000;
+      align-items: center;
+      border-radius: 5px;
       letter-spacing: 0.6px;
+      justify-content: center;
       text-transform: uppercase;
       color: var(--primary-color);
       transition: all 0.2s linear;
 
-      >.link {
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-        padding: 15px 15px;
-        background: var(--grey-black);
+      &:hover {
+        background-color: var(--brand-color);
       }
 
-      >.link:hover {
-        background-color: var(--brand-color);
+      >.link {
+        display: block;
       }
     }
   }
@@ -333,6 +342,7 @@
 @media screen and (max-width: 800px) {
   .header {
     padding: 0;
+    overflow-x: hidden;
 
     /*  */
     .topHeader {
@@ -405,7 +415,7 @@
                 border-bottom: 1px solid black;
               }
 
-              >.subDropDownMenu {
+              .subDropDownMenu {
                 left: auto;
                 border: unset;
                 display: none;
@@ -413,7 +423,7 @@
                 position: relative;
                 border-radius: 0px;
 
-                >.subDropDownMenuItem {
+                .subDropDownMenuItem {
                   height: 50px;
                   margin-left: 20px;
                   border-radius: 0px;
@@ -430,9 +440,14 @@
           position: relative;
           background: var(--brand-color);
 
-          >.dropDownMenu {
-            >.dropDownMenuItem {
+          > .dropDownMenu {
+            .dropDownMenuItem {
               height: unset;
+              .subDropDownMenu{
+                .subDropDownMenuItem{
+                  height: unset;
+                }
+              }
             }
           }
         }

@@ -99,6 +99,7 @@
   /*=============================*/
   .bottomFooter {
     display: flex;
+    flex-wrap: wrap;
     padding: 10px 80px;
     align-items: center;
     justify-content: space-between;
@@ -138,6 +139,9 @@
 @media screen and (max-width: 700px) {
   .footer{
     > .firstFooter{
+      > .desc{
+        width: 100%;
+      }
       > .footerAddresses{
         > .addressContainer{
           flex-direction: column;
@@ -160,6 +164,15 @@
             border-bottom: 2px solid #777676;
           }
         }
+      }
+    }
+
+    .bottomFooter{
+      padding: 10px;
+      flex-direction: column-reverse;
+      > .copyright{
+        font-size: 14px;
+        text-align: center;
       }
     }
   }

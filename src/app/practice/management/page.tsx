@@ -9,7 +9,7 @@ export default function Duisburg() {
     {
       image: "",
       name: "Mpheza Christine,\nLÜPKE-OKOCHA",
-      skill: ["Inhaberin", " Bachelor of physiotherapy"],
+      skill: ["Inhaberin", " Physiotherapeutin"],
     },
     {
       image: "",
@@ -23,7 +23,7 @@ export default function Duisburg() {
       },
     {
       image: "",
-      name: "Denise Groß",
+      name: "Denise Cuenca Dancuna",
       skill: ["Duisburg Standortleiterin", "\nPhysiotherapeutin"],
     },
     {
